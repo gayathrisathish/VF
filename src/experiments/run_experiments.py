@@ -1,72 +1,33 @@
+""" the structure of this file:
+1. Imports
+2. Constants
+   - Horizons
+   - Indices
+   - Models
+3. main()
+4. Run all experiments
+5. Save results
+6. Entry point """
 """
-Main experiment runner.
+Main Experiment Runner
 
-Runs all:
-- horizons
-- indices
-- models
+Runs all volatility forecasting experiments.
+
+Workflow:
+1. Load data
+2. Loop through forecast horizons
+3. Loop through indices
+4. Loop through models
+5. Train
+6. Validate
+7. Test
+8. Save metrics
+9. Save predictions
 """
 
-HORIZONS = [
-    "1day",
-    "5day",
-    "22day"
-]
-
-INDICES = [
-    "^GSPC",
-    "^IXIC",
-    "^FTSE",
-    "^GDAXI",
-    "^N225",
-    "^HSI",
-    "000001.SS"
-]
-
-MODELS = [
-    "HistoricalVolatility",
-    "Persistence",
-    "GARCH",
-    "EGARCH",
-    "GJRGARCH",
-    "LinearRegression",
-    "RandomForest",
-    "XGBoost",
-    "LSTM",
-    "GRU",
-    "Transformer",
-    "GARCHLSTM",
-    "GARCHGRU",
-    "GARCHTransformer"
-]
-
-
-def main():
-
-    for horizon in HORIZONS:
-
-        print(f"\nRunning {horizon}")
-
-        for index in INDICES:
-
-            print(f"   {index}")
-
-            for model in MODELS:
-
-                print(f"      {model}")
-
-                # load data
-
-                # train
-
-                # validate
-
-                # test
-
-                # save predictions
-
-                # save metrics
-
-
-if __name__ == "__main__":
-    main()
+from src.utils.data_loader import load_split
+from src.utils.model_registry import get_model
+from src.utils.results_manager import (
+    save_metrics,
+    save_predictions,
+)
