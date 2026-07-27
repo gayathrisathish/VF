@@ -1,3 +1,4 @@
+"""Forecasting dataset construction utilities for the research project."""
 """
 create_forecasting_dataset.py
 

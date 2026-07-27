@@ -1,3 +1,4 @@
+"""Feature engineering utilities for the research project."""
 """
 feature_engineering.py
 
