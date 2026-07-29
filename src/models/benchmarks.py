@@ -26,6 +26,7 @@ def train_historical_volatility(
     X_test,
     y_test,
     index,
+    horizon,
 ):
     """
     Historical Volatility Benchmark.
@@ -75,6 +76,7 @@ def train_persistence(
     X_test,
     y_test,
     index,
+    horizon,
 ):
     """
     Persistence Benchmark.

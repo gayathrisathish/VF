@@ -96,6 +96,7 @@ def run_all_experiments():
         print(f"\nLoading {horizon} dataset...")
 
         data = load_split(horizon)
+        forecast_horizon = int(horizon.removesuffix("day"))
 
         X_train = data["X_train"]
         X_validation = data["X_validation"]
@@ -119,7 +120,17 @@ def run_all_experiments():
 
                 print(f"Running {model_name}...")
 
-                # Training happens here
+                model = get_model(model_name)
+                results = model(
+                    X_train,
+                    y_train_index,
+                    X_validation,
+                    y_validation_index,
+                    X_test,
+                    y_test_index,
+                    index,
+                    forecast_horizon,
+                )
 
                 # Saving happens here
 # entry point
