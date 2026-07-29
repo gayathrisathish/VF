@@ -40,13 +40,36 @@ def load_split(horizon: str):
     split_path = BASE_PATH / horizon
 
     data = {
-        "X_train": pd.read_csv(split_path / "X_train.csv"),
-        "X_validation": pd.read_csv(split_path / "X_validation.csv"),
-        "X_test": pd.read_csv(split_path / "X_test.csv"),
-
-        "y_train": pd.read_csv(split_path / "y_train.csv"),
-        "y_validation": pd.read_csv(split_path / "y_validation.csv"),
-        "y_test": pd.read_csv(split_path / "y_test.csv")
+        "X_train": pd.read_csv(
+            split_path / "X_train.csv",
+            index_col="Date",
+            parse_dates=["Date"],
+        ),
+        "X_validation": pd.read_csv(
+            split_path / "X_validation.csv",
+            index_col="Date",
+            parse_dates=["Date"],
+        ),
+        "X_test": pd.read_csv(
+            split_path / "X_test.csv",
+            index_col="Date",
+            parse_dates=["Date"],
+        ),
+        "y_train": pd.read_csv(
+            split_path / "y_train.csv",
+            index_col="Date",
+            parse_dates=["Date"],
+        ),
+        "y_validation": pd.read_csv(
+            split_path / "y_validation.csv",
+            index_col="Date",
+            parse_dates=["Date"],
+        ),
+        "y_test": pd.read_csv(
+            split_path / "y_test.csv",
+            index_col="Date",
+            parse_dates=["Date"],
+        ),
     }
 
     return data
