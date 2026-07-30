@@ -1,0 +1,90 @@
+{
+  "feature_name": "GARCH_sigma",
+  "index": "^IXIC",
+  "horizon": "1day",
+  "return_column": "^IXIC_return",
+  "annualization_factor": 252,
+  "garch_specification": {
+    "mean": "Zero",
+    "vol": "GARCH",
+    "p": 1,
+    "o": 0,
+    "q": 1,
+    "dist": "normal",
+    "rescale": false
+  },
+  "source_split_dir": "data/splits/1day",
+  "feature_column_count": {
+    "original": 35,
+    "augmented": 36
+  },
+  "split_shapes": {
+    "train": {
+      "original": [
+        3805,
+        35
+      ],
+      "augmented": [
+        3805,
+        36
+      ]
+    },
+    "validation": {
+      "original": [
+        815,
+        35
+      ],
+      "augmented": [
+        815,
+        36
+      ]
+    },
+    "test": {
+      "original": [
+        816,
+        35
+      ],
+      "augmented": [
+        816,
+        36
+      ]
+    }
+  },
+  "checks": {
+    "boundary_crossing": false,
+    "date_alignment": {
+      "train": true,
+      "validation": true,
+      "test": true
+    },
+    "row_counts": {
+      "train": {
+        "original": 3805,
+        "augmented": 3805
+      },
+      "validation": {
+        "original": 815,
+        "augmented": 815
+      },
+      "test": {
+        "original": 816,
+        "augmented": 816
+      }
+    },
+    "feature_column_added": {
+      "train": true,
+      "validation": true,
+      "test": true
+    },
+    "missing_values": {
+      "train": false,
+      "validation": false,
+      "test": false
+    },
+    "index_monotonic": {
+      "train": true,
+      "validation": true,
+      "test": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sequence_length": 30,
+  "original_shapes": {
+    "train": [
+      3805,
+      37
+    ],
+    "validation": [
+      815,
+      37
+    ],
+    "test": [
+      816,
+      37
+    ]
+  },
+  "sequence_shapes": {
+    "train": [
+      3776,
+      30,
+      36
+    ],
+    "validation": [
+      786,
+      30,
+      36
+    ],
+    "test": [
+      787,
+      30,
+      36
+    ]
+  },
+  "discarded_rows": {
+    "train": 29,
+    "validation": 29,
+    "test": 29
+  },
+  "boundary_crossing": false
+}
