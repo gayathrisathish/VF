@@ -30,7 +30,7 @@ from src.models.garch_models import (
 # Machine Learning Models
 # ============================================================================
 
-from src.models.machine_learning import (
+from src.models.ml_models import (
     train_linear_regression,
     train_random_forest,
     train_xgboost,
