@@ -5,8 +5,6 @@ tensorflow
 torch
 arch
 xgboost
-lightgbm
-catboost
 matplotlib
 seaborn
 scipy
