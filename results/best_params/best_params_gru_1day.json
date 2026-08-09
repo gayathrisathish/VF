@@ -1,0 +1,17 @@
+{
+  "model": "gru",
+  "index": "^GSPC",
+  "horizon": "1day",
+  "metric": "QLIKE",
+  "sequence_length": 30,
+  "best_score": -0.9742003741363954,
+  "best_params": {
+    "hidden_units": 256,
+    "num_layers": 1,
+    "dropout": 0.21337513304088554,
+    "learning_rate": 0.00048578844397459766,
+    "batch_size": 16
+  },
+  "n_trials": 50,
+  "random_seed": 42
+}

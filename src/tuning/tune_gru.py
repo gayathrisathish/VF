@@ -56,7 +56,7 @@ SEQUENCE_LENGTH = 30   # fixed — see rationale in module docstring above
 
 N_TRIALS = 50
 RANDOM_SEED = 42
-
+ 
 TRAIN_END = "2018-12-31"
 VAL_END = "2021-12-31"
 # everything after VAL_END is test data — never touched during tuning

@@ -1,0 +1,17 @@
+{
+  "model": "lstm",
+  "index": "^GSPC",
+  "horizon": "5day",
+  "metric": "QLIKE",
+  "sequence_length": 30,
+  "best_score": -0.9578228036036105,
+  "best_params": {
+    "hidden_units": 32,
+    "num_layers": 1,
+    "dropout": 0.46192818331622626,
+    "learning_rate": 0.0005021379846868952,
+    "batch_size": 16
+  },
+  "n_trials": 50,
+  "random_seed": 42
+}

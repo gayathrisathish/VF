@@ -41,7 +41,7 @@ import os
 # STEP 1: SETTINGS
 # ============================================================
 
-HORIZON = "1day"   # <-- change to "1day", "5day", or "22day" and re-run for each
+HORIZON = "22day"   # <-- change to "1day", "5day", or "22day" and re-run for each
 
 DATA_PATH = f"data/features/features_{HORIZON}.csv"
 TARGET_COLUMN = "^GSPC_target"

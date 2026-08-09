@@ -1,0 +1,18 @@
+{
+  "model": "transformer",
+  "index": "^GSPC",
+  "horizon": "1day",
+  "metric": "QLIKE",
+  "sequence_length": 30,
+  "batch_size": 32,
+  "best_score": -0.9705395148761897,
+  "best_params": {
+    "d_model": 128,
+    "num_heads": 8,
+    "num_layers": 4,
+    "dropout": 0.24714049346383757,
+    "learning_rate": 1.1497327459323846e-05
+  },
+  "n_trials": 50,
+  "random_seed": 42
+}
