@@ -39,6 +39,7 @@ def train_and_evaluate(
 
     return {
         "model": model,
+        "fitted_model": model,
         "validation_predictions": validation_predictions,
         "test_predictions": test_predictions,
         "validation_metrics": validation_metrics,

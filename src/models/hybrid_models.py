@@ -22,6 +22,7 @@ def train_garch_lstm(
 	y_test,
 	index,
 	horizon,
+	hyperparameters=None,
 ):
 	"""Train the GARCH-LSTM hybrid model on GARCH-augmented sequences."""
 	del index
@@ -35,6 +36,7 @@ def train_garch_lstm(
 		X_test,
 		y_test,
 		horizon,
+		hyperparameters,
 	)
 
 
@@ -47,6 +49,7 @@ def train_garch_gru(
 	y_test,
 	index,
 	horizon,
+	hyperparameters=None,
 ):
 	"""Train the GARCH-GRU hybrid model on GARCH-augmented sequences."""
 	del index
@@ -60,6 +63,7 @@ def train_garch_gru(
 		X_test,
 		y_test,
 		horizon,
+		hyperparameters,
 	)
 
 
@@ -72,6 +76,7 @@ def train_garch_transformer(
 	y_test,
 	index,
 	horizon,
+	hyperparameters=None,
 ):
 	"""Train the GARCH-Transformer hybrid model on GARCH-augmented sequences."""
 	del index
@@ -85,4 +90,5 @@ def train_garch_transformer(
 		X_test,
 		y_test,
 		horizon,
+		hyperparameters,
 	)

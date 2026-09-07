@@ -25,15 +25,19 @@ Workflow:
 9. Save predictions
 """
 
+import argparse
+import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
+from src.utils.best_params import is_tuned_model, load_best_params
 from src.utils.data_loader import load_split
 from src.utils.model_registry import get_model
 from src.utils.results_manager import (
     save_metrics,
+    save_model,
     save_predictions,
 )
 
@@ -304,13 +308,106 @@ def _validate_runner_configuration():
         get_model(model_name)
 
 
-def main():
+def _is_registered_model(model_name):
+    """Return True when the model exists in the shared model registry."""
+
+    try:
+        get_model(model_name)
+    except ValueError:
+        return False
+
+    return True
+
+
+def _build_argument_parser():
+    """Command-line interface for selecting a subset of the benchmark grid."""
+
+    parser = argparse.ArgumentParser(
+        prog="python -m src.experiments.run_experiments",
+        description=(
+            "Run volatility forecasting experiments. With no arguments the "
+            "full grid of models and horizons is run, exactly as before."
+        ),
+    )
+
+    parser.add_argument(
+        "--models",
+        nargs="+",
+        metavar="MODEL",
+        default=None,
+        help=(
+            "Model names to run (default: all). "
+            f"Choices: {', '.join(MODELS)}"
+        ),
+    )
+
+    parser.add_argument(
+        "--horizons",
+        nargs="+",
+        metavar="HORIZON",
+        default=None,
+        help=f"Forecast horizons to run (default: all). Choices: {', '.join(HORIZONS)}",
+    )
+
+    parser.add_argument(
+        "--list-models",
+        action="store_true",
+        help="Print the registered model names and exit.",
+    )
+
+    return parser
+
+
+def main(argv=None):
+    """Entry point. Returns a non-zero exit code if any experiment failed."""
+
+    global MODELS, HORIZONS
+
+    parser = _build_argument_parser()
+    arguments = parser.parse_args(argv)
+
+    if arguments.list_models:
+        for model_name in MODELS:
+            print(model_name)
+        return 0
+
+    if arguments.models is not None:
+        unknown_models = [
+            model_name
+            for model_name in arguments.models
+            if not _is_registered_model(model_name)
+        ]
+        if unknown_models:
+            parser.error(
+                "Unknown model(s): "
+                + ", ".join(unknown_models)
+                + ". Registered models: "
+                + ", ".join(MODELS)
+            )
+        MODELS = list(dict.fromkeys(arguments.models))
+
+    if arguments.horizons is not None:
+        unknown_horizons = [
+            horizon
+            for horizon in arguments.horizons
+            if horizon not in HORIZONS
+        ]
+        if unknown_horizons:
+            parser.error(
+                "Unknown horizon(s): "
+                + ", ".join(unknown_horizons)
+                + ". Available horizons: "
+                + ", ".join(HORIZONS)
+            )
+        HORIZONS = list(dict.fromkeys(arguments.horizons))
 
     print("=" * 60)
     print("VOLATILITY FORECASTING EXPERIMENTS")
     print("=" * 60)
     _validate_runner_configuration()
     print(f"Registered models: {len(MODELS)}")
+    print(f"Models: {', '.join(MODELS)}")
+    print(f"Horizons: {', '.join(HORIZONS)}")
     print(
         "Expected experiments: "
         f"{len(HORIZONS)} horizons x {len(INDICES)} indices x {len(MODELS)} models "
@@ -324,6 +421,8 @@ def main():
         f"Failed experiments: {summary['failed_experiments']} | "
         f"Total attempted: {summary['total_experiments']}"
     )
+
+    return 1 if summary["failed_experiments"] else 0
 
 def run_all_experiments():
     total_experiments = len(HORIZONS) * len(INDICES) * len(MODELS)
@@ -370,6 +469,16 @@ def run_all_experiments():
                     )
 
                     model = get_model(model_name)
+
+                    # Tuned models must use the saved best parameters. A
+                    # missing study file raises here rather than silently
+                    # falling back to the untuned defaults.
+                    model_keyword_arguments = {}
+                    if is_tuned_model(model_name):
+                        model_keyword_arguments["hyperparameters"] = (
+                            load_best_params(model_name, horizon)
+                        )
+
                     results = model(
                         dataset_split["X_train"],
                         y_train_index,
@@ -379,6 +488,7 @@ def run_all_experiments():
                         y_test_index,
                         index,
                         forecast_horizon,
+                        **model_keyword_arguments,
                     )
 
                     save_metrics(
@@ -397,6 +507,24 @@ def run_all_experiments():
                         y_test_index.values,
                         results["test_predictions"],
                     )
+
+                    # Persist the fitted estimator. Benchmark models are
+                    # rule-based and have no estimator to save; a failed save
+                    # for any other model fails the experiment.
+                    fitted_model = results.get("fitted_model")
+                    if fitted_model is None:
+                        print(
+                            f"[NO MODEL FILE] {horizon} | {index} | "
+                            f"{model_name} exposes no fitted estimator to save"
+                        )
+                    else:
+                        model_path = save_model(
+                            horizon,
+                            index,
+                            model_name,
+                            fitted_model,
+                        )
+                        print(f"[SAVED MODEL] {model_path}")
 
                     successful_experiments += 1
                     print(
@@ -417,4 +545,4 @@ def run_all_experiments():
     }
 # entry point
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

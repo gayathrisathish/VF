@@ -25,6 +25,14 @@ EARLY_STOPPING_PATIENCE = 10
 TRANSFORMER_MODEL_DIM = 64
 TRANSFORMER_NUM_HEADS = 4
 
+# Defaults preserving the original untuned architecture. Tuned runs override
+# these with the values loaded from results/best_params.
+DEFAULT_HIDDEN_UNITS = 64
+DEFAULT_NUM_LAYERS = 1
+DEFAULT_DROPOUT = 0.0
+DEFAULT_LEARNING_RATE = 0.001
+DEFAULT_TRANSFORMER_DROPOUT = 0.1
+
 
 def _get_tensorflow():
     """Import TensorFlow lazily so the module stays importable without it."""
@@ -176,45 +184,110 @@ def _normalize_features(X_train, X_validation, X_test):
     )
 
 
-def _build_lstm_model(input_shape):
+def _build_recurrent_model(
+    recurrent_layer,
+    model_name,
+    input_shape,
+    hyperparameters=None,
+):
+    """Build a stacked recurrent forecaster from tuned or default settings."""
     tf = _get_tensorflow()
+    hyperparameters = hyperparameters or {}
+
+    hidden_units = int(hyperparameters.get("hidden_units", DEFAULT_HIDDEN_UNITS))
+    num_layers = int(hyperparameters.get("num_layers", DEFAULT_NUM_LAYERS))
+    dropout = float(hyperparameters.get("dropout", DEFAULT_DROPOUT))
+    learning_rate = float(
+        hyperparameters.get("learning_rate", DEFAULT_LEARNING_RATE)
+    )
+
+    if hidden_units < 1:
+        raise ValueError("hidden_units must be a positive integer.")
+    if num_layers < 1:
+        raise ValueError("num_layers must be a positive integer.")
+    if not 0.0 <= dropout < 1.0:
+        raise ValueError("dropout must be in [0, 1).")
+    if learning_rate <= 0.0:
+        raise ValueError("learning_rate must be positive.")
+
     inputs = tf.keras.Input(shape=input_shape)
-    x = tf.keras.layers.LSTM(64)(inputs)
-    x = tf.keras.layers.Dense(32, activation="relu")(x)
+    x = inputs
+
+    for layer_index in range(num_layers):
+        return_sequences = layer_index < num_layers - 1
+        x = recurrent_layer(hidden_units, return_sequences=return_sequences)(x)
+        if dropout > 0.0:
+            x = tf.keras.layers.Dropout(dropout)(x)
+
+    # The tuning studies feed the recurrent stack straight into the output
+    # layer. Without tuned settings the original 32-unit dense head is kept.
+    if not hyperparameters:
+        x = tf.keras.layers.Dense(32, activation="relu")(x)
+
     outputs = tf.keras.layers.Dense(1, activation="softplus")(x)
 
-    model = tf.keras.Model(inputs=inputs, outputs=outputs, name="LSTM")
+    model = tf.keras.Model(inputs=inputs, outputs=outputs, name=model_name)
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+        optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
         loss="mse",
     )
     return model
 
 
-def _build_gru_model(input_shape):
+def _build_lstm_model(input_shape, hyperparameters=None):
     tf = _get_tensorflow()
-    inputs = tf.keras.Input(shape=input_shape)
-    x = tf.keras.layers.GRU(64)(inputs)
-    x = tf.keras.layers.Dense(32, activation="relu")(x)
-    outputs = tf.keras.layers.Dense(1, activation="softplus")(x)
-
-    model = tf.keras.Model(inputs=inputs, outputs=outputs, name="GRU")
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
-        loss="mse",
+    return _build_recurrent_model(
+        tf.keras.layers.LSTM,
+        "LSTM",
+        input_shape,
+        hyperparameters,
     )
-    return model
 
 
-def _build_transformer_model(input_shape):
+def _build_gru_model(input_shape, hyperparameters=None):
     tf = _get_tensorflow()
+    return _build_recurrent_model(
+        tf.keras.layers.GRU,
+        "GRU",
+        input_shape,
+        hyperparameters,
+    )
+
+
+def _build_transformer_model(input_shape, hyperparameters=None):
+    tf = _get_tensorflow()
+    hyperparameters = hyperparameters or {}
+
+    model_dim = int(hyperparameters.get("d_model", TRANSFORMER_MODEL_DIM))
+    num_heads = int(hyperparameters.get("num_heads", TRANSFORMER_NUM_HEADS))
+    num_layers = int(hyperparameters.get("num_layers", DEFAULT_NUM_LAYERS))
+    dropout = float(
+        hyperparameters.get("dropout", DEFAULT_TRANSFORMER_DROPOUT)
+    )
+    learning_rate = float(
+        hyperparameters.get("learning_rate", DEFAULT_LEARNING_RATE)
+    )
+
+    if model_dim < 1:
+        raise ValueError("d_model must be a positive integer.")
+    if num_heads < 1:
+        raise ValueError("num_heads must be a positive integer.")
+    if model_dim % num_heads != 0:
+        raise ValueError("d_model must be divisible by num_heads.")
+    if num_layers < 1:
+        raise ValueError("num_layers must be a positive integer.")
+    if not 0.0 <= dropout < 1.0:
+        raise ValueError("dropout must be in [0, 1).")
+    if learning_rate <= 0.0:
+        raise ValueError("learning_rate must be positive.")
+
     inputs = tf.keras.Input(shape=input_shape)
-    x = tf.keras.layers.Dense(TRANSFORMER_MODEL_DIM)(inputs)
+    x = tf.keras.layers.Dense(model_dim)(inputs)
 
     position_indices = tf.range(start=0, limit=input_shape[0], delta=1)
     positional_embeddings = tf.keras.layers.Embedding(
         input_dim=SEQUENCE_LENGTH,
-        output_dim=TRANSFORMER_MODEL_DIM,
+        output_dim=model_dim,
         name="positional_embedding",
     )(position_indices)
     positional_embeddings = tf.keras.layers.Lambda(
@@ -224,21 +297,24 @@ def _build_transformer_model(input_shape):
 
     x = tf.keras.layers.Add()([x, positional_embeddings])
     x = tf.keras.layers.LayerNormalization()(x)
-    attention_output = tf.keras.layers.MultiHeadAttention(
-        num_heads=TRANSFORMER_NUM_HEADS,
-        key_dim=TRANSFORMER_MODEL_DIM // TRANSFORMER_NUM_HEADS,
-        dropout=0.1,
-    )(x, x)
-    x = tf.keras.layers.Add()([x, attention_output])
-    x = tf.keras.layers.LayerNormalization()(x)
-    x = tf.keras.layers.Dense(TRANSFORMER_MODEL_DIM * 2, activation="relu")(x)
-    x = tf.keras.layers.Dense(TRANSFORMER_MODEL_DIM, activation="relu")(x)
+
+    for _ in range(num_layers):
+        attention_output = tf.keras.layers.MultiHeadAttention(
+            num_heads=num_heads,
+            key_dim=model_dim // num_heads,
+            dropout=dropout,
+        )(x, x)
+        x = tf.keras.layers.Add()([x, attention_output])
+        x = tf.keras.layers.LayerNormalization()(x)
+        x = tf.keras.layers.Dense(model_dim * 2, activation="relu")(x)
+        x = tf.keras.layers.Dense(model_dim, activation="relu")(x)
+
     x = tf.keras.layers.GlobalAveragePooling1D()(x)
     outputs = tf.keras.layers.Dense(1, activation="softplus")(x)
 
     model = tf.keras.Model(inputs=inputs, outputs=outputs, name="Transformer")
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+        optimizer=tf.keras.optimizers.Adam(learning_rate=learning_rate),
         loss="mse",
     )
     return model
@@ -254,8 +330,13 @@ def _train_and_evaluate(
     X_test,
     y_test,
     horizon,
+    hyperparameters=None,
 ):
-    """Fit one deep-learning estimator and evaluate its volatility forecasts."""
+    """Fit one deep-learning estimator and evaluate its volatility forecasts.
+
+    ``hyperparameters`` carries the tuned settings loaded from
+    results/best_params. When it is None the original defaults are used.
+    """
     (
         X_train,
         y_train,
@@ -283,7 +364,11 @@ def _train_and_evaluate(
         X_test,
     )
 
-    model = model_builder(X_train.shape[1:])
+    model = model_builder(X_train.shape[1:], hyperparameters)
+    batch_size = int((hyperparameters or {}).get("batch_size", BATCH_SIZE))
+    if batch_size < 1:
+        raise ValueError("batch_size must be a positive integer.")
+
     early_stopping = tf.keras.callbacks.EarlyStopping(
         monitor="val_loss",
         patience=EARLY_STOPPING_PATIENCE,
@@ -295,7 +380,7 @@ def _train_and_evaluate(
         y_train,
         validation_data=(X_validation, y_validation),
         epochs=MAX_EPOCHS,
-        batch_size=BATCH_SIZE,
+        batch_size=batch_size,
         callbacks=[early_stopping],
         verbose=0,
         shuffle=False,
@@ -308,6 +393,8 @@ def _train_and_evaluate(
 
     return {
         "model": model_name,
+        "fitted_model": model,
+        "hyperparameters": dict(hyperparameters or {}),
         "validation_predictions": validation_predictions,
         "test_predictions": test_predictions,
         "validation_metrics": calculate_metrics(
@@ -327,6 +414,7 @@ def train_lstm(
     y_test,
     index,
     horizon,
+    hyperparameters=None,
 ):
     """Train a reproducible LSTM volatility forecaster."""
     del index
@@ -340,6 +428,7 @@ def train_lstm(
         X_test,
         y_test,
         horizon,
+        hyperparameters,
     )
 
 
@@ -352,6 +441,7 @@ def train_gru(
     y_test,
     index,
     horizon,
+    hyperparameters=None,
 ):
     """Train a reproducible GRU volatility forecaster."""
     del index
@@ -365,6 +455,7 @@ def train_gru(
         X_test,
         y_test,
         horizon,
+        hyperparameters,
     )
 
 
@@ -377,6 +468,7 @@ def train_transformer(
     y_test,
     index,
     horizon,
+    hyperparameters=None,
 ):
     """Train a reproducible Transformer volatility forecaster."""
     del index
@@ -390,4 +482,5 @@ def train_transformer(
         X_test,
         y_test,
         horizon,
+        hyperparameters,
     )

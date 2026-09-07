@@ -162,6 +162,10 @@ def _train_arch_model(
     if not np.isfinite(all_returns).all():
         raise ValueError("Return values must be finite in every data split.")
 
+    # Stays None when fitting fails and the fallback forecast is used, so a
+    # non-converged run is never persisted as if it were a fitted model.
+    fitted_model = None
+
     try:
         model = arch_model(
             training_returns,
@@ -222,6 +226,7 @@ def _train_arch_model(
 
     return {
         "model": model_name,
+        "fitted_model": fitted_model,
         "validation_predictions": validation_predictions,
         "test_predictions": test_predictions,
         "validation_metrics": validation_metrics,
