@@ -15,6 +15,11 @@ The tuning scripts write one JSON file per (model, horizon) study into
 Every study was run on a single index (``^GSPC``), so the saved parameters are
 keyed by (model, horizon) only and are reused across all indices. This module
 never runs tuning; it only reads what tuning already wrote.
+
+The saved files do not all share one layout. A file may wrap the tuned values
+in a study envelope under ``best_params`` (or ``params``/``best_trial``), or it
+may hold nothing but the tuned values at the top level. Both are read here, and
+``batch_size`` is picked up from whichever level the study recorded it at.
 """
 
 import json
@@ -60,6 +65,78 @@ REQUIRED_PARAMETERS = {
         "learning_rate",
     ),
 }
+
+
+# =============================================================================
+# Saved file layouts
+# =============================================================================
+
+# The tuning scripts wrap the tuned values in an envelope that also records how
+# the study was run. Some studies were exported with the tuned values at the
+# top level instead, so the loader has to recognise both layouts. These keys
+# describe the study rather than the model and are never handed to a builder.
+STUDY_METADATA_KEYS = frozenset(
+    {
+        "model",
+        "index",
+        "horizon",
+        "metric",
+        "sequence_length",
+        "best_score",
+        "best_value",
+        "n_trials",
+        "random_seed",
+        "study_name",
+        "direction",
+        "datetime_start",
+        "datetime_complete",
+        "duration",
+        "best_trial",
+        "best_trial_number",
+        "trial_number",
+        "params",
+        "best_params",
+    }
+)
+
+# Keys under which a file may nest the tuned values.
+NESTED_PARAMETER_KEYS = ("best_params", "params")
+
+
+def _extract_parameters(payload, params_path):
+    """
+    Pull the tuned values out of one saved study file.
+
+    Supports the wrapped layout written by the tuning scripts
+    (``{"best_params": {...}, ...}``), the Optuna trial layout
+    (``{"best_trial": {"params": {...}}}``) and a flat layout where the file
+    holds nothing but the tuned values.
+    """
+
+    for key in NESTED_PARAMETER_KEYS:
+        nested = payload.get(key)
+        if isinstance(nested, dict):
+            return dict(nested)
+
+    best_trial = payload.get("best_trial")
+    if isinstance(best_trial, dict) and isinstance(
+        best_trial.get("params"), dict
+    ):
+        return dict(best_trial["params"])
+
+    flat_parameters = {
+        name: value
+        for name, value in payload.items()
+        if name not in STUDY_METADATA_KEYS
+    }
+
+    if not flat_parameters:
+        raise ValueError(
+            f"{params_path} holds no tuned hyperparameters: it has neither a "
+            "'best_params' object nor any top-level parameter entries."
+        )
+
+    return flat_parameters
 
 
 def is_tuned_model(model_name):
@@ -118,26 +195,29 @@ def load_best_params(model_name, horizon):
             f"{horizon} from {params_path}: {error}"
         ) from error
 
-    if not isinstance(payload, dict) or "best_params" not in payload:
+    if not isinstance(payload, dict):
         raise ValueError(
-            f"{params_path} does not contain a 'best_params' object."
+            f"{params_path} must contain a JSON object, not "
+            f"{type(payload).__name__}."
         )
 
-    best_params = dict(payload["best_params"])
+    best_params = _extract_parameters(payload, params_path)
 
     missing_parameters = [
         parameter
         for parameter in REQUIRED_PARAMETERS[model_name]
-        if parameter not in best_params
+        if best_params.get(parameter) is None
     ]
     if missing_parameters:
         raise ValueError(
             f"{params_path} is missing required parameters for "
-            f"{model_name}: {', '.join(missing_parameters)}"
+            f"{model_name}: {', '.join(missing_parameters)}. "
+            f"Found: {', '.join(sorted(best_params)) or '(none)'}"
         )
 
-    # The transformer studies record batch_size at the top level of the file
-    # rather than inside best_params; the recurrent studies record it inside.
+    # batch_size sits wherever the study that produced the file put it: the
+    # recurrent studies tune it and store it with the other values, while the
+    # transformer studies hold it fixed and record it beside the envelope.
     if "batch_size" not in best_params and "batch_size" in payload:
         best_params["batch_size"] = payload["batch_size"]
 
