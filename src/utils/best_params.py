@@ -7,15 +7,10 @@ The tuning scripts write one JSON file per (model, horizon) study into
     src/tuning/tune_lstm.py            -> best_params_lstm_<horizon>.json
     src/tuning/tune_gru.py             -> best_params_gru_<horizon>.json
     src/tuning/tune_transformer.py     -> best_params_transformer_<horizon>.json
-    src/training/tune_garch_lstm.py    -> best_params_garchlstm_<horizon>.json
-    src/training/tune_garch_gru.py     -> best_params_garchgru_<horizon>.json
+    src/training/tune_garch_lstm.py    -> best_params_garch_lstm_<horizon>.json
+    src/training/tune_garch_gru.py     -> best_params_garch_gru_<horizon>.json
     src/training/tune_garch_transformer.py
-                                       -> best_params_garchtransformer_<horizon>.json
-
-The completed hybrid studies were saved without an underscore in the model
-name. The underscored names written by the current tuning scripts
-(``best_params_garch_lstm_<horizon>.json`` and so on) are still accepted when
-the completed file is absent.
+                                       -> best_params_garch_transformer_<horizon>.json
 
 Every study was run on a single index (``^GSPC``), so the saved parameters are
 keyed by (model, horizon) only and are reused across all indices. This module
@@ -44,14 +39,6 @@ STUDY_STEMS = {
     "LSTM": "lstm",
     "GRU": "gru",
     "Transformer": "transformer",
-    "GARCHLSTM": "garchlstm",
-    "GARCHGRU": "garchgru",
-    "GARCHTransformer": "garchtransformer",
-}
-
-# Underscored stems written by the in-repo hybrid tuning scripts. Checked only
-# when no file exists under the primary stem.
-LEGACY_STUDY_STEMS = {
     "GARCHLSTM": "garch_lstm",
     "GARCHGRU": "garch_gru",
     "GARCHTransformer": "garch_transformer",
@@ -158,8 +145,8 @@ def is_tuned_model(model_name):
     return model_name in STUDY_STEMS
 
 
-def best_params_candidates(model_name, horizon):
-    """Return every accepted JSON path for one study, preferred first."""
+def best_params_path(model_name, horizon):
+    """Return the expected JSON path for one (model, horizon) study."""
 
     if model_name not in STUDY_STEMS:
         raise ValueError(
@@ -167,31 +154,9 @@ def best_params_candidates(model_name, horizon):
             f"Tuned models: {sorted(STUDY_STEMS)}"
         )
 
-    stems = [STUDY_STEMS[model_name]]
-    if model_name in LEGACY_STUDY_STEMS:
-        stems.append(LEGACY_STUDY_STEMS[model_name])
+    stem = STUDY_STEMS[model_name]
 
-    return [
-        BEST_PARAMS_DIR / f"best_params_{stem}_{horizon}.json"
-        for stem in stems
-    ]
-
-
-def best_params_path(model_name, horizon):
-    """
-    Return the JSON path for one (model, horizon) study.
-
-    This is the first candidate that exists, or the preferred path when none
-    does, so a missing-file error names the file tuning should have produced.
-    """
-
-    candidates = best_params_candidates(model_name, horizon)
-
-    for candidate in candidates:
-        if candidate.exists():
-            return candidate
-
-    return candidates[0]
+    return BEST_PARAMS_DIR / f"best_params_{stem}_{horizon}.json"
 
 
 def load_best_params(model_name, horizon):
@@ -215,13 +180,9 @@ def load_best_params(model_name, horizon):
     params_path = best_params_path(model_name, horizon)
 
     if not params_path.exists():
-        searched = ", ".join(
-            str(candidate)
-            for candidate in best_params_candidates(model_name, horizon)
-        )
         raise FileNotFoundError(
             f"Missing tuned hyperparameters for {model_name} | {horizon}: "
-            f"none of {searched} exist. Run the corresponding tuning "
+            f"{params_path} does not exist. Run the corresponding tuning "
             "script before training this model."
         )
 
