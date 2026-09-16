@@ -1,0 +1,1354 @@
+==============================================================
+  PART 1 - BASELINES AND CLASSICAL MODELS
+==============================================================
+Repository root : /home/admin_01/VF
+Virtual environment : /home/admin_01/vf-venv
+Python              : Python 3.12.3
+Models              : 8
+Horizons            : 1day 5day 22day
+Training runs       : 24
+--------------------------------------------------------------
+
+[1/24] RUNNING model=HistoricalVolatility horizon=1day
+--------------------------------------------------------------
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: HistoricalVolatility
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | HistoricalVolatility...
+[NO MODEL FILE] 1day | ^GSPC | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 1day | ^GSPC | HistoricalVolatility
+
+Index: ^IXIC
+Running 1day | ^IXIC | HistoricalVolatility...
+[NO MODEL FILE] 1day | ^IXIC | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 1day | ^IXIC | HistoricalVolatility
+
+Index: ^FTSE
+Running 1day | ^FTSE | HistoricalVolatility...
+[NO MODEL FILE] 1day | ^FTSE | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 1day | ^FTSE | HistoricalVolatility
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | HistoricalVolatility...
+[NO MODEL FILE] 1day | ^GDAXI | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 1day | ^GDAXI | HistoricalVolatility
+
+Index: ^N225
+Running 1day | ^N225 | HistoricalVolatility...
+[NO MODEL FILE] 1day | ^N225 | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 1day | ^N225 | HistoricalVolatility
+
+Index: ^HSI
+Running 1day | ^HSI | HistoricalVolatility...
+[NO MODEL FILE] 1day | ^HSI | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 1day | ^HSI | HistoricalVolatility
+
+Index: 000001.SS
+Running 1day | 000001.SS | HistoricalVolatility...
+[NO MODEL FILE] 1day | 000001.SS | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 1day | 000001.SS | HistoricalVolatility
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[1/24] DONE    model=HistoricalVolatility horizon=1day
+
+[2/24] RUNNING model=Persistence horizon=1day
+--------------------------------------------------------------
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: Persistence
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | Persistence...
+[NO MODEL FILE] 1day | ^GSPC | Persistence exposes no fitted estimator to save
+[SUCCESS] 1day | ^GSPC | Persistence
+
+Index: ^IXIC
+Running 1day | ^IXIC | Persistence...
+[NO MODEL FILE] 1day | ^IXIC | Persistence exposes no fitted estimator to save
+[SUCCESS] 1day | ^IXIC | Persistence
+
+Index: ^FTSE
+Running 1day | ^FTSE | Persistence...
+[NO MODEL FILE] 1day | ^FTSE | Persistence exposes no fitted estimator to save
+[SUCCESS] 1day | ^FTSE | Persistence
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | Persistence...
+[NO MODEL FILE] 1day | ^GDAXI | Persistence exposes no fitted estimator to save
+[SUCCESS] 1day | ^GDAXI | Persistence
+
+Index: ^N225
+Running 1day | ^N225 | Persistence...
+[NO MODEL FILE] 1day | ^N225 | Persistence exposes no fitted estimator to save
+[SUCCESS] 1day | ^N225 | Persistence
+
+Index: ^HSI
+Running 1day | ^HSI | Persistence...
+[NO MODEL FILE] 1day | ^HSI | Persistence exposes no fitted estimator to save
+[SUCCESS] 1day | ^HSI | Persistence
+
+Index: 000001.SS
+Running 1day | 000001.SS | Persistence...
+[NO MODEL FILE] 1day | 000001.SS | Persistence exposes no fitted estimator to save
+[SUCCESS] 1day | 000001.SS | Persistence
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[2/24] DONE    model=Persistence horizon=1day
+
+[3/24] RUNNING model=GARCH horizon=1day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151957.242959    1179 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151957.545790    1179 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151959.013364    1179 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: GARCH
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | GARCH...
+[SAVED MODEL] results/models/1day/GSPC/GARCH.joblib
+[SUCCESS] 1day | ^GSPC | GARCH
+
+Index: ^IXIC
+Running 1day | ^IXIC | GARCH...
+[SAVED MODEL] results/models/1day/IXIC/GARCH.joblib
+[SUCCESS] 1day | ^IXIC | GARCH
+
+Index: ^FTSE
+Running 1day | ^FTSE | GARCH...
+[SAVED MODEL] results/models/1day/FTSE/GARCH.joblib
+[SUCCESS] 1day | ^FTSE | GARCH
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | GARCH...
+[SAVED MODEL] results/models/1day/GDAXI/GARCH.joblib
+[SUCCESS] 1day | ^GDAXI | GARCH
+
+Index: ^N225
+Running 1day | ^N225 | GARCH...
+[SAVED MODEL] results/models/1day/N225/GARCH.joblib
+[SUCCESS] 1day | ^N225 | GARCH
+
+Index: ^HSI
+Running 1day | ^HSI | GARCH...
+[SAVED MODEL] results/models/1day/HSI/GARCH.joblib
+[SUCCESS] 1day | ^HSI | GARCH
+
+Index: 000001.SS
+Running 1day | 000001.SS | GARCH...
+[SAVED MODEL] results/models/1day/000001SS/GARCH.joblib
+[SUCCESS] 1day | 000001.SS | GARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[3/24] DONE    model=GARCH horizon=1day
+
+[4/24] RUNNING model=EGARCH horizon=1day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151960.960526    1219 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151960.991283    1219 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151961.792051    1219 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: EGARCH
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | EGARCH...
+[SAVED MODEL] results/models/1day/GSPC/EGARCH.joblib
+[SUCCESS] 1day | ^GSPC | EGARCH
+
+Index: ^IXIC
+Running 1day | ^IXIC | EGARCH...
+[SAVED MODEL] results/models/1day/IXIC/EGARCH.joblib
+[SUCCESS] 1day | ^IXIC | EGARCH
+
+Index: ^FTSE
+Running 1day | ^FTSE | EGARCH...
+[SAVED MODEL] results/models/1day/FTSE/EGARCH.joblib
+[SUCCESS] 1day | ^FTSE | EGARCH
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | EGARCH...
+[SAVED MODEL] results/models/1day/GDAXI/EGARCH.joblib
+[SUCCESS] 1day | ^GDAXI | EGARCH
+
+Index: ^N225
+Running 1day | ^N225 | EGARCH...
+[SAVED MODEL] results/models/1day/N225/EGARCH.joblib
+[SUCCESS] 1day | ^N225 | EGARCH
+
+Index: ^HSI
+Running 1day | ^HSI | EGARCH...
+[SAVED MODEL] results/models/1day/HSI/EGARCH.joblib
+[SUCCESS] 1day | ^HSI | EGARCH
+
+Index: 000001.SS
+Running 1day | 000001.SS | EGARCH...
+[SAVED MODEL] results/models/1day/000001SS/EGARCH.joblib
+[SUCCESS] 1day | 000001.SS | EGARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[4/24] DONE    model=EGARCH horizon=1day
+
+[5/24] RUNNING model=GJRGARCH horizon=1day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151963.617693    1259 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151963.650780    1259 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151964.477738    1259 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: GJRGARCH
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | GJRGARCH...
+[SAVED MODEL] results/models/1day/GSPC/GJRGARCH.joblib
+[SUCCESS] 1day | ^GSPC | GJRGARCH
+
+Index: ^IXIC
+Running 1day | ^IXIC | GJRGARCH...
+[SAVED MODEL] results/models/1day/IXIC/GJRGARCH.joblib
+[SUCCESS] 1day | ^IXIC | GJRGARCH
+
+Index: ^FTSE
+Running 1day | ^FTSE | GJRGARCH...
+[SAVED MODEL] results/models/1day/FTSE/GJRGARCH.joblib
+[SUCCESS] 1day | ^FTSE | GJRGARCH
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | GJRGARCH...
+[SAVED MODEL] results/models/1day/GDAXI/GJRGARCH.joblib
+[SUCCESS] 1day | ^GDAXI | GJRGARCH
+
+Index: ^N225
+Running 1day | ^N225 | GJRGARCH...
+[SAVED MODEL] results/models/1day/N225/GJRGARCH.joblib
+[SUCCESS] 1day | ^N225 | GJRGARCH
+
+Index: ^HSI
+Running 1day | ^HSI | GJRGARCH...
+[SAVED MODEL] results/models/1day/HSI/GJRGARCH.joblib
+[SUCCESS] 1day | ^HSI | GJRGARCH
+
+Index: 000001.SS
+Running 1day | 000001.SS | GJRGARCH...
+[SAVED MODEL] results/models/1day/000001SS/GJRGARCH.joblib
+[SUCCESS] 1day | 000001.SS | GJRGARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[5/24] DONE    model=GJRGARCH horizon=1day
+
+[6/24] RUNNING model=LinearRegression horizon=1day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151966.257265    1299 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151966.286984    1299 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151967.075138    1299 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: LinearRegression
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | LinearRegression...
+[SAVED MODEL] results/models/1day/GSPC/LinearRegression.joblib
+[SUCCESS] 1day | ^GSPC | LinearRegression
+
+Index: ^IXIC
+Running 1day | ^IXIC | LinearRegression...
+[SAVED MODEL] results/models/1day/IXIC/LinearRegression.joblib
+[SUCCESS] 1day | ^IXIC | LinearRegression
+
+Index: ^FTSE
+Running 1day | ^FTSE | LinearRegression...
+[SAVED MODEL] results/models/1day/FTSE/LinearRegression.joblib
+[SUCCESS] 1day | ^FTSE | LinearRegression
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | LinearRegression...
+[SAVED MODEL] results/models/1day/GDAXI/LinearRegression.joblib
+[SUCCESS] 1day | ^GDAXI | LinearRegression
+
+Index: ^N225
+Running 1day | ^N225 | LinearRegression...
+[SAVED MODEL] results/models/1day/N225/LinearRegression.joblib
+[SUCCESS] 1day | ^N225 | LinearRegression
+
+Index: ^HSI
+Running 1day | ^HSI | LinearRegression...
+[SAVED MODEL] results/models/1day/HSI/LinearRegression.joblib
+[SUCCESS] 1day | ^HSI | LinearRegression
+
+Index: 000001.SS
+Running 1day | 000001.SS | LinearRegression...
+[SAVED MODEL] results/models/1day/000001SS/LinearRegression.joblib
+[SUCCESS] 1day | 000001.SS | LinearRegression
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[6/24] DONE    model=LinearRegression horizon=1day
+
+[7/24] RUNNING model=RandomForest horizon=1day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151969.465033    1339 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151969.495465    1339 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151970.322067    1339 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: RandomForest
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | RandomForest...
+[SAVED MODEL] results/models/1day/GSPC/RandomForest.joblib
+[SUCCESS] 1day | ^GSPC | RandomForest
+
+Index: ^IXIC
+Running 1day | ^IXIC | RandomForest...
+[SAVED MODEL] results/models/1day/IXIC/RandomForest.joblib
+[SUCCESS] 1day | ^IXIC | RandomForest
+
+Index: ^FTSE
+Running 1day | ^FTSE | RandomForest...
+[SAVED MODEL] results/models/1day/FTSE/RandomForest.joblib
+[SUCCESS] 1day | ^FTSE | RandomForest
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | RandomForest...
+[SAVED MODEL] results/models/1day/GDAXI/RandomForest.joblib
+[SUCCESS] 1day | ^GDAXI | RandomForest
+
+Index: ^N225
+Running 1day | ^N225 | RandomForest...
+[SAVED MODEL] results/models/1day/N225/RandomForest.joblib
+[SUCCESS] 1day | ^N225 | RandomForest
+
+Index: ^HSI
+Running 1day | ^HSI | RandomForest...
+[SAVED MODEL] results/models/1day/HSI/RandomForest.joblib
+[SUCCESS] 1day | ^HSI | RandomForest
+
+Index: 000001.SS
+Running 1day | 000001.SS | RandomForest...
+[SAVED MODEL] results/models/1day/000001SS/RandomForest.joblib
+[SUCCESS] 1day | 000001.SS | RandomForest
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[7/24] DONE    model=RandomForest horizon=1day
+
+[8/24] RUNNING model=XGBoost horizon=1day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151979.364823    1862 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151979.394959    1862 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151980.304137    1862 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: XGBoost
+Horizons: 1day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 1day tabular dataset...
+
+Index: ^GSPC
+Running 1day | ^GSPC | XGBoost...
+[SAVED MODEL] results/models/1day/GSPC/XGBoost.joblib
+[SUCCESS] 1day | ^GSPC | XGBoost
+
+Index: ^IXIC
+Running 1day | ^IXIC | XGBoost...
+[SAVED MODEL] results/models/1day/IXIC/XGBoost.joblib
+[SUCCESS] 1day | ^IXIC | XGBoost
+
+Index: ^FTSE
+Running 1day | ^FTSE | XGBoost...
+[SAVED MODEL] results/models/1day/FTSE/XGBoost.joblib
+[SUCCESS] 1day | ^FTSE | XGBoost
+
+Index: ^GDAXI
+Running 1day | ^GDAXI | XGBoost...
+[SAVED MODEL] results/models/1day/GDAXI/XGBoost.joblib
+[SUCCESS] 1day | ^GDAXI | XGBoost
+
+Index: ^N225
+Running 1day | ^N225 | XGBoost...
+[SAVED MODEL] results/models/1day/N225/XGBoost.joblib
+[SUCCESS] 1day | ^N225 | XGBoost
+
+Index: ^HSI
+Running 1day | ^HSI | XGBoost...
+[SAVED MODEL] results/models/1day/HSI/XGBoost.joblib
+[SUCCESS] 1day | ^HSI | XGBoost
+
+Index: 000001.SS
+Running 1day | 000001.SS | XGBoost...
+[SAVED MODEL] results/models/1day/000001SS/XGBoost.joblib
+[SUCCESS] 1day | 000001.SS | XGBoost
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[8/24] DONE    model=XGBoost horizon=1day
+
+[9/24] RUNNING model=HistoricalVolatility horizon=5day
+--------------------------------------------------------------
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: HistoricalVolatility
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | HistoricalVolatility...
+[NO MODEL FILE] 5day | ^GSPC | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 5day | ^GSPC | HistoricalVolatility
+
+Index: ^IXIC
+Running 5day | ^IXIC | HistoricalVolatility...
+[NO MODEL FILE] 5day | ^IXIC | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 5day | ^IXIC | HistoricalVolatility
+
+Index: ^FTSE
+Running 5day | ^FTSE | HistoricalVolatility...
+[NO MODEL FILE] 5day | ^FTSE | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 5day | ^FTSE | HistoricalVolatility
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | HistoricalVolatility...
+[NO MODEL FILE] 5day | ^GDAXI | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 5day | ^GDAXI | HistoricalVolatility
+
+Index: ^N225
+Running 5day | ^N225 | HistoricalVolatility...
+[NO MODEL FILE] 5day | ^N225 | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 5day | ^N225 | HistoricalVolatility
+
+Index: ^HSI
+Running 5day | ^HSI | HistoricalVolatility...
+[NO MODEL FILE] 5day | ^HSI | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 5day | ^HSI | HistoricalVolatility
+
+Index: 000001.SS
+Running 5day | 000001.SS | HistoricalVolatility...
+[NO MODEL FILE] 5day | 000001.SS | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 5day | 000001.SS | HistoricalVolatility
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[9/24] DONE    model=HistoricalVolatility horizon=5day
+
+[10/24] RUNNING model=Persistence horizon=5day
+--------------------------------------------------------------
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: Persistence
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | Persistence...
+[NO MODEL FILE] 5day | ^GSPC | Persistence exposes no fitted estimator to save
+[SUCCESS] 5day | ^GSPC | Persistence
+
+Index: ^IXIC
+Running 5day | ^IXIC | Persistence...
+[NO MODEL FILE] 5day | ^IXIC | Persistence exposes no fitted estimator to save
+[SUCCESS] 5day | ^IXIC | Persistence
+
+Index: ^FTSE
+Running 5day | ^FTSE | Persistence...
+[NO MODEL FILE] 5day | ^FTSE | Persistence exposes no fitted estimator to save
+[SUCCESS] 5day | ^FTSE | Persistence
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | Persistence...
+[NO MODEL FILE] 5day | ^GDAXI | Persistence exposes no fitted estimator to save
+[SUCCESS] 5day | ^GDAXI | Persistence
+
+Index: ^N225
+Running 5day | ^N225 | Persistence...
+[NO MODEL FILE] 5day | ^N225 | Persistence exposes no fitted estimator to save
+[SUCCESS] 5day | ^N225 | Persistence
+
+Index: ^HSI
+Running 5day | ^HSI | Persistence...
+[NO MODEL FILE] 5day | ^HSI | Persistence exposes no fitted estimator to save
+[SUCCESS] 5day | ^HSI | Persistence
+
+Index: 000001.SS
+Running 5day | 000001.SS | Persistence...
+[NO MODEL FILE] 5day | 000001.SS | Persistence exposes no fitted estimator to save
+[SUCCESS] 5day | 000001.SS | Persistence
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[10/24] DONE    model=Persistence horizon=5day
+
+[11/24] RUNNING model=GARCH horizon=5day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151986.190548    2004 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151986.220736    2004 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151987.007356    2004 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: GARCH
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | GARCH...
+[SAVED MODEL] results/models/5day/GSPC/GARCH.joblib
+[SUCCESS] 5day | ^GSPC | GARCH
+
+Index: ^IXIC
+Running 5day | ^IXIC | GARCH...
+[SAVED MODEL] results/models/5day/IXIC/GARCH.joblib
+[SUCCESS] 5day | ^IXIC | GARCH
+
+Index: ^FTSE
+Running 5day | ^FTSE | GARCH...
+[SAVED MODEL] results/models/5day/FTSE/GARCH.joblib
+[SUCCESS] 5day | ^FTSE | GARCH
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | GARCH...
+[SAVED MODEL] results/models/5day/GDAXI/GARCH.joblib
+[SUCCESS] 5day | ^GDAXI | GARCH
+
+Index: ^N225
+Running 5day | ^N225 | GARCH...
+[SAVED MODEL] results/models/5day/N225/GARCH.joblib
+[SUCCESS] 5day | ^N225 | GARCH
+
+Index: ^HSI
+Running 5day | ^HSI | GARCH...
+[SAVED MODEL] results/models/5day/HSI/GARCH.joblib
+[SUCCESS] 5day | ^HSI | GARCH
+
+Index: 000001.SS
+Running 5day | 000001.SS | GARCH...
+[SAVED MODEL] results/models/5day/000001SS/GARCH.joblib
+[SUCCESS] 5day | 000001.SS | GARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[11/24] DONE    model=GARCH horizon=5day
+
+[12/24] RUNNING model=EGARCH horizon=5day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151989.436193    2044 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151989.467399    2044 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151990.331043    2044 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: EGARCH
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | EGARCH...
+[SAVED MODEL] results/models/5day/GSPC/EGARCH.joblib
+[SUCCESS] 5day | ^GSPC | EGARCH
+
+Index: ^IXIC
+Running 5day | ^IXIC | EGARCH...
+[SAVED MODEL] results/models/5day/IXIC/EGARCH.joblib
+[SUCCESS] 5day | ^IXIC | EGARCH
+
+Index: ^FTSE
+Running 5day | ^FTSE | EGARCH...
+[SAVED MODEL] results/models/5day/FTSE/EGARCH.joblib
+[SUCCESS] 5day | ^FTSE | EGARCH
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | EGARCH...
+[SAVED MODEL] results/models/5day/GDAXI/EGARCH.joblib
+[SUCCESS] 5day | ^GDAXI | EGARCH
+
+Index: ^N225
+Running 5day | ^N225 | EGARCH...
+[SAVED MODEL] results/models/5day/N225/EGARCH.joblib
+[SUCCESS] 5day | ^N225 | EGARCH
+
+Index: ^HSI
+Running 5day | ^HSI | EGARCH...
+[SAVED MODEL] results/models/5day/HSI/EGARCH.joblib
+[SUCCESS] 5day | ^HSI | EGARCH
+
+Index: 000001.SS
+Running 5day | 000001.SS | EGARCH...
+[SAVED MODEL] results/models/5day/000001SS/EGARCH.joblib
+[SUCCESS] 5day | 000001.SS | EGARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[12/24] DONE    model=EGARCH horizon=5day
+
+[13/24] RUNNING model=GJRGARCH horizon=5day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151994.425567    2084 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151994.455720    2084 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151995.268533    2084 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+/home/admin_01/VF/src/models/garch_models.py:298: RuntimeWarning: GJRGARCH fitting failed (ARCH optimizer did not converge.); using a stable fallback forecast.
+  return _train_arch_model(
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: GJRGARCH
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | GJRGARCH...
+[SAVED MODEL] results/models/5day/GSPC/GJRGARCH.joblib
+[SUCCESS] 5day | ^GSPC | GJRGARCH
+
+Index: ^IXIC
+Running 5day | ^IXIC | GJRGARCH...
+[SAVED MODEL] results/models/5day/IXIC/GJRGARCH.joblib
+[SUCCESS] 5day | ^IXIC | GJRGARCH
+
+Index: ^FTSE
+Running 5day | ^FTSE | GJRGARCH...
+[SAVED MODEL] results/models/5day/FTSE/GJRGARCH.joblib
+[SUCCESS] 5day | ^FTSE | GJRGARCH
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | GJRGARCH...
+[SAVED MODEL] results/models/5day/GDAXI/GJRGARCH.joblib
+[SUCCESS] 5day | ^GDAXI | GJRGARCH
+
+Index: ^N225
+Running 5day | ^N225 | GJRGARCH...
+[SAVED MODEL] results/models/5day/N225/GJRGARCH.joblib
+[SUCCESS] 5day | ^N225 | GJRGARCH
+
+Index: ^HSI
+Running 5day | ^HSI | GJRGARCH...
+[SAVED MODEL] results/models/5day/HSI/GJRGARCH.joblib
+[SUCCESS] 5day | ^HSI | GJRGARCH
+
+Index: 000001.SS
+Running 5day | 000001.SS | GJRGARCH...
+[SAVED MODEL] results/models/5day/000001SS/GJRGARCH.joblib
+[SUCCESS] 5day | 000001.SS | GJRGARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[13/24] DONE    model=GJRGARCH horizon=5day
+
+[14/24] RUNNING model=LinearRegression horizon=5day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151997.259434    2124 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789151997.290972    2124 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789151998.094229    2124 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: LinearRegression
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | LinearRegression...
+[SAVED MODEL] results/models/5day/GSPC/LinearRegression.joblib
+[SUCCESS] 5day | ^GSPC | LinearRegression
+
+Index: ^IXIC
+Running 5day | ^IXIC | LinearRegression...
+[SAVED MODEL] results/models/5day/IXIC/LinearRegression.joblib
+[SUCCESS] 5day | ^IXIC | LinearRegression
+
+Index: ^FTSE
+Running 5day | ^FTSE | LinearRegression...
+[SAVED MODEL] results/models/5day/FTSE/LinearRegression.joblib
+[SUCCESS] 5day | ^FTSE | LinearRegression
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | LinearRegression...
+[SAVED MODEL] results/models/5day/GDAXI/LinearRegression.joblib
+[SUCCESS] 5day | ^GDAXI | LinearRegression
+
+Index: ^N225
+Running 5day | ^N225 | LinearRegression...
+[SAVED MODEL] results/models/5day/N225/LinearRegression.joblib
+[SUCCESS] 5day | ^N225 | LinearRegression
+
+Index: ^HSI
+Running 5day | ^HSI | LinearRegression...
+[SAVED MODEL] results/models/5day/HSI/LinearRegression.joblib
+[SUCCESS] 5day | ^HSI | LinearRegression
+
+Index: 000001.SS
+Running 5day | 000001.SS | LinearRegression...
+[SAVED MODEL] results/models/5day/000001SS/LinearRegression.joblib
+[SUCCESS] 5day | 000001.SS | LinearRegression
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[14/24] DONE    model=LinearRegression horizon=5day
+
+[15/24] RUNNING model=RandomForest horizon=5day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152000.849457    2164 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152000.889256    2164 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152001.776527    2164 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: RandomForest
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | RandomForest...
+[SAVED MODEL] results/models/5day/GSPC/RandomForest.joblib
+[SUCCESS] 5day | ^GSPC | RandomForest
+
+Index: ^IXIC
+Running 5day | ^IXIC | RandomForest...
+[SAVED MODEL] results/models/5day/IXIC/RandomForest.joblib
+[SUCCESS] 5day | ^IXIC | RandomForest
+
+Index: ^FTSE
+Running 5day | ^FTSE | RandomForest...
+[SAVED MODEL] results/models/5day/FTSE/RandomForest.joblib
+[SUCCESS] 5day | ^FTSE | RandomForest
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | RandomForest...
+[SAVED MODEL] results/models/5day/GDAXI/RandomForest.joblib
+[SUCCESS] 5day | ^GDAXI | RandomForest
+
+Index: ^N225
+Running 5day | ^N225 | RandomForest...
+[SAVED MODEL] results/models/5day/N225/RandomForest.joblib
+[SUCCESS] 5day | ^N225 | RandomForest
+
+Index: ^HSI
+Running 5day | ^HSI | RandomForest...
+[SAVED MODEL] results/models/5day/HSI/RandomForest.joblib
+[SUCCESS] 5day | ^HSI | RandomForest
+
+Index: 000001.SS
+Running 5day | 000001.SS | RandomForest...
+[SAVED MODEL] results/models/5day/000001SS/RandomForest.joblib
+[SUCCESS] 5day | 000001.SS | RandomForest
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[15/24] DONE    model=RandomForest horizon=5day
+
+[16/24] RUNNING model=XGBoost horizon=5day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152010.475273    2687 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152010.509129    2687 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152011.416840    2687 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: XGBoost
+Horizons: 5day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 5day tabular dataset...
+
+Index: ^GSPC
+Running 5day | ^GSPC | XGBoost...
+[SAVED MODEL] results/models/5day/GSPC/XGBoost.joblib
+[SUCCESS] 5day | ^GSPC | XGBoost
+
+Index: ^IXIC
+Running 5day | ^IXIC | XGBoost...
+[SAVED MODEL] results/models/5day/IXIC/XGBoost.joblib
+[SUCCESS] 5day | ^IXIC | XGBoost
+
+Index: ^FTSE
+Running 5day | ^FTSE | XGBoost...
+[SAVED MODEL] results/models/5day/FTSE/XGBoost.joblib
+[SUCCESS] 5day | ^FTSE | XGBoost
+
+Index: ^GDAXI
+Running 5day | ^GDAXI | XGBoost...
+[SAVED MODEL] results/models/5day/GDAXI/XGBoost.joblib
+[SUCCESS] 5day | ^GDAXI | XGBoost
+
+Index: ^N225
+Running 5day | ^N225 | XGBoost...
+[SAVED MODEL] results/models/5day/N225/XGBoost.joblib
+[SUCCESS] 5day | ^N225 | XGBoost
+
+Index: ^HSI
+Running 5day | ^HSI | XGBoost...
+[SAVED MODEL] results/models/5day/HSI/XGBoost.joblib
+[SUCCESS] 5day | ^HSI | XGBoost
+
+Index: 000001.SS
+Running 5day | 000001.SS | XGBoost...
+[SAVED MODEL] results/models/5day/000001SS/XGBoost.joblib
+[SUCCESS] 5day | 000001.SS | XGBoost
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[16/24] DONE    model=XGBoost horizon=5day
+
+[17/24] RUNNING model=HistoricalVolatility horizon=22day
+--------------------------------------------------------------
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: HistoricalVolatility
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | HistoricalVolatility...
+[NO MODEL FILE] 22day | ^GSPC | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 22day | ^GSPC | HistoricalVolatility
+
+Index: ^IXIC
+Running 22day | ^IXIC | HistoricalVolatility...
+[NO MODEL FILE] 22day | ^IXIC | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 22day | ^IXIC | HistoricalVolatility
+
+Index: ^FTSE
+Running 22day | ^FTSE | HistoricalVolatility...
+[NO MODEL FILE] 22day | ^FTSE | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 22day | ^FTSE | HistoricalVolatility
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | HistoricalVolatility...
+[NO MODEL FILE] 22day | ^GDAXI | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 22day | ^GDAXI | HistoricalVolatility
+
+Index: ^N225
+Running 22day | ^N225 | HistoricalVolatility...
+[NO MODEL FILE] 22day | ^N225 | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 22day | ^N225 | HistoricalVolatility
+
+Index: ^HSI
+Running 22day | ^HSI | HistoricalVolatility...
+[NO MODEL FILE] 22day | ^HSI | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 22day | ^HSI | HistoricalVolatility
+
+Index: 000001.SS
+Running 22day | 000001.SS | HistoricalVolatility...
+[NO MODEL FILE] 22day | 000001.SS | HistoricalVolatility exposes no fitted estimator to save
+[SUCCESS] 22day | 000001.SS | HistoricalVolatility
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[17/24] DONE    model=HistoricalVolatility horizon=22day
+
+[18/24] RUNNING model=Persistence horizon=22day
+--------------------------------------------------------------
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: Persistence
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | Persistence...
+[NO MODEL FILE] 22day | ^GSPC | Persistence exposes no fitted estimator to save
+[SUCCESS] 22day | ^GSPC | Persistence
+
+Index: ^IXIC
+Running 22day | ^IXIC | Persistence...
+[NO MODEL FILE] 22day | ^IXIC | Persistence exposes no fitted estimator to save
+[SUCCESS] 22day | ^IXIC | Persistence
+
+Index: ^FTSE
+Running 22day | ^FTSE | Persistence...
+[NO MODEL FILE] 22day | ^FTSE | Persistence exposes no fitted estimator to save
+[SUCCESS] 22day | ^FTSE | Persistence
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | Persistence...
+[NO MODEL FILE] 22day | ^GDAXI | Persistence exposes no fitted estimator to save
+[SUCCESS] 22day | ^GDAXI | Persistence
+
+Index: ^N225
+Running 22day | ^N225 | Persistence...
+[NO MODEL FILE] 22day | ^N225 | Persistence exposes no fitted estimator to save
+[SUCCESS] 22day | ^N225 | Persistence
+
+Index: ^HSI
+Running 22day | ^HSI | Persistence...
+[NO MODEL FILE] 22day | ^HSI | Persistence exposes no fitted estimator to save
+[SUCCESS] 22day | ^HSI | Persistence
+
+Index: 000001.SS
+Running 22day | 000001.SS | Persistence...
+[NO MODEL FILE] 22day | 000001.SS | Persistence exposes no fitted estimator to save
+[SUCCESS] 22day | 000001.SS | Persistence
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[18/24] DONE    model=Persistence horizon=22day
+
+[19/24] RUNNING model=GARCH horizon=22day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152017.059844    2828 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152017.089816    2828 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152017.881319    2828 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: GARCH
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | GARCH...
+[SAVED MODEL] results/models/22day/GSPC/GARCH.joblib
+[SUCCESS] 22day | ^GSPC | GARCH
+
+Index: ^IXIC
+Running 22day | ^IXIC | GARCH...
+[SAVED MODEL] results/models/22day/IXIC/GARCH.joblib
+[SUCCESS] 22day | ^IXIC | GARCH
+
+Index: ^FTSE
+Running 22day | ^FTSE | GARCH...
+[SAVED MODEL] results/models/22day/FTSE/GARCH.joblib
+[SUCCESS] 22day | ^FTSE | GARCH
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | GARCH...
+[SAVED MODEL] results/models/22day/GDAXI/GARCH.joblib
+[SUCCESS] 22day | ^GDAXI | GARCH
+
+Index: ^N225
+Running 22day | ^N225 | GARCH...
+[SAVED MODEL] results/models/22day/N225/GARCH.joblib
+[SUCCESS] 22day | ^N225 | GARCH
+
+Index: ^HSI
+Running 22day | ^HSI | GARCH...
+[SAVED MODEL] results/models/22day/HSI/GARCH.joblib
+[SUCCESS] 22day | ^HSI | GARCH
+
+Index: 000001.SS
+Running 22day | 000001.SS | GARCH...
+[SAVED MODEL] results/models/22day/000001SS/GARCH.joblib
+[SUCCESS] 22day | 000001.SS | GARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[19/24] DONE    model=GARCH horizon=22day
+
+[20/24] RUNNING model=EGARCH horizon=22day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152021.983597    2868 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152022.014368    2868 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152022.824380    2868 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: EGARCH
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | EGARCH...
+[SAVED MODEL] results/models/22day/GSPC/EGARCH.joblib
+[SUCCESS] 22day | ^GSPC | EGARCH
+
+Index: ^IXIC
+Running 22day | ^IXIC | EGARCH...
+[SAVED MODEL] results/models/22day/IXIC/EGARCH.joblib
+[SUCCESS] 22day | ^IXIC | EGARCH
+
+Index: ^FTSE
+Running 22day | ^FTSE | EGARCH...
+[SAVED MODEL] results/models/22day/FTSE/EGARCH.joblib
+[SUCCESS] 22day | ^FTSE | EGARCH
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | EGARCH...
+[SAVED MODEL] results/models/22day/GDAXI/EGARCH.joblib
+[SUCCESS] 22day | ^GDAXI | EGARCH
+
+Index: ^N225
+Running 22day | ^N225 | EGARCH...
+[SAVED MODEL] results/models/22day/N225/EGARCH.joblib
+[SUCCESS] 22day | ^N225 | EGARCH
+
+Index: ^HSI
+Running 22day | ^HSI | EGARCH...
+[SAVED MODEL] results/models/22day/HSI/EGARCH.joblib
+[SUCCESS] 22day | ^HSI | EGARCH
+
+Index: 000001.SS
+Running 22day | 000001.SS | EGARCH...
+[SAVED MODEL] results/models/22day/000001SS/EGARCH.joblib
+[SUCCESS] 22day | 000001.SS | EGARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[20/24] DONE    model=EGARCH horizon=22day
+
+[21/24] RUNNING model=GJRGARCH horizon=22day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152036.385817    2908 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152036.421565    2908 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152037.340643    2908 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: GJRGARCH
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | GJRGARCH...
+[SAVED MODEL] results/models/22day/GSPC/GJRGARCH.joblib
+[SUCCESS] 22day | ^GSPC | GJRGARCH
+
+Index: ^IXIC
+Running 22day | ^IXIC | GJRGARCH...
+[SAVED MODEL] results/models/22day/IXIC/GJRGARCH.joblib
+[SUCCESS] 22day | ^IXIC | GJRGARCH
+
+Index: ^FTSE
+Running 22day | ^FTSE | GJRGARCH...
+[SAVED MODEL] results/models/22day/FTSE/GJRGARCH.joblib
+[SUCCESS] 22day | ^FTSE | GJRGARCH
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | GJRGARCH...
+[SAVED MODEL] results/models/22day/GDAXI/GJRGARCH.joblib
+[SUCCESS] 22day | ^GDAXI | GJRGARCH
+
+Index: ^N225
+Running 22day | ^N225 | GJRGARCH...
+[SAVED MODEL] results/models/22day/N225/GJRGARCH.joblib
+[SUCCESS] 22day | ^N225 | GJRGARCH
+
+Index: ^HSI
+Running 22day | ^HSI | GJRGARCH...
+[SAVED MODEL] results/models/22day/HSI/GJRGARCH.joblib
+[SUCCESS] 22day | ^HSI | GJRGARCH
+
+Index: 000001.SS
+Running 22day | 000001.SS | GJRGARCH...
+[SAVED MODEL] results/models/22day/000001SS/GJRGARCH.joblib
+[SUCCESS] 22day | 000001.SS | GJRGARCH
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[21/24] DONE    model=GJRGARCH horizon=22day
+
+[22/24] RUNNING model=LinearRegression horizon=22day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152039.725727    2948 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152039.755913    2948 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152041.138746    2948 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: LinearRegression
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | LinearRegression...
+[SAVED MODEL] results/models/22day/GSPC/LinearRegression.joblib
+[SUCCESS] 22day | ^GSPC | LinearRegression
+
+Index: ^IXIC
+Running 22day | ^IXIC | LinearRegression...
+[SAVED MODEL] results/models/22day/IXIC/LinearRegression.joblib
+[SUCCESS] 22day | ^IXIC | LinearRegression
+
+Index: ^FTSE
+Running 22day | ^FTSE | LinearRegression...
+[SAVED MODEL] results/models/22day/FTSE/LinearRegression.joblib
+[SUCCESS] 22day | ^FTSE | LinearRegression
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | LinearRegression...
+[SAVED MODEL] results/models/22day/GDAXI/LinearRegression.joblib
+[SUCCESS] 22day | ^GDAXI | LinearRegression
+
+Index: ^N225
+Running 22day | ^N225 | LinearRegression...
+[SAVED MODEL] results/models/22day/N225/LinearRegression.joblib
+[SUCCESS] 22day | ^N225 | LinearRegression
+
+Index: ^HSI
+Running 22day | ^HSI | LinearRegression...
+[SAVED MODEL] results/models/22day/HSI/LinearRegression.joblib
+[SUCCESS] 22day | ^HSI | LinearRegression
+
+Index: 000001.SS
+Running 22day | 000001.SS | LinearRegression...
+[SAVED MODEL] results/models/22day/000001SS/LinearRegression.joblib
+[SUCCESS] 22day | 000001.SS | LinearRegression
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[22/24] DONE    model=LinearRegression horizon=22day
+
+[23/24] RUNNING model=RandomForest horizon=22day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152043.583238    2988 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152043.617094    2988 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152044.440490    2988 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: RandomForest
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | RandomForest...
+[SAVED MODEL] results/models/22day/GSPC/RandomForest.joblib
+[SUCCESS] 22day | ^GSPC | RandomForest
+
+Index: ^IXIC
+Running 22day | ^IXIC | RandomForest...
+[SAVED MODEL] results/models/22day/IXIC/RandomForest.joblib
+[SUCCESS] 22day | ^IXIC | RandomForest
+
+Index: ^FTSE
+Running 22day | ^FTSE | RandomForest...
+[SAVED MODEL] results/models/22day/FTSE/RandomForest.joblib
+[SUCCESS] 22day | ^FTSE | RandomForest
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | RandomForest...
+[SAVED MODEL] results/models/22day/GDAXI/RandomForest.joblib
+[SUCCESS] 22day | ^GDAXI | RandomForest
+
+Index: ^N225
+Running 22day | ^N225 | RandomForest...
+[SAVED MODEL] results/models/22day/N225/RandomForest.joblib
+[SUCCESS] 22day | ^N225 | RandomForest
+
+Index: ^HSI
+Running 22day | ^HSI | RandomForest...
+[SAVED MODEL] results/models/22day/HSI/RandomForest.joblib
+[SUCCESS] 22day | ^HSI | RandomForest
+
+Index: 000001.SS
+Running 22day | 000001.SS | RandomForest...
+[SAVED MODEL] results/models/22day/000001SS/RandomForest.joblib
+[SUCCESS] 22day | 000001.SS | RandomForest
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[23/24] DONE    model=RandomForest horizon=22day
+
+[24/24] RUNNING model=XGBoost horizon=22day
+--------------------------------------------------------------
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152050.093748    3511 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789152050.123081    3511 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789152050.906329    3511 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+============================================================
+VOLATILITY FORECASTING EXPERIMENTS
+============================================================
+Registered models: 1
+Models: XGBoost
+Horizons: 22day
+Expected experiments: 1 horizons x 7 indices x 1 models = 7
+
+Loading 22day tabular dataset...
+
+Index: ^GSPC
+Running 22day | ^GSPC | XGBoost...
+[SAVED MODEL] results/models/22day/GSPC/XGBoost.joblib
+[SUCCESS] 22day | ^GSPC | XGBoost
+
+Index: ^IXIC
+Running 22day | ^IXIC | XGBoost...
+[SAVED MODEL] results/models/22day/IXIC/XGBoost.joblib
+[SUCCESS] 22day | ^IXIC | XGBoost
+
+Index: ^FTSE
+Running 22day | ^FTSE | XGBoost...
+[SAVED MODEL] results/models/22day/FTSE/XGBoost.joblib
+[SUCCESS] 22day | ^FTSE | XGBoost
+
+Index: ^GDAXI
+Running 22day | ^GDAXI | XGBoost...
+[SAVED MODEL] results/models/22day/GDAXI/XGBoost.joblib
+[SUCCESS] 22day | ^GDAXI | XGBoost
+
+Index: ^N225
+Running 22day | ^N225 | XGBoost...
+[SAVED MODEL] results/models/22day/N225/XGBoost.joblib
+[SUCCESS] 22day | ^N225 | XGBoost
+
+Index: ^HSI
+Running 22day | ^HSI | XGBoost...
+[SAVED MODEL] results/models/22day/HSI/XGBoost.joblib
+[SUCCESS] 22day | ^HSI | XGBoost
+
+Index: 000001.SS
+Running 22day | 000001.SS | XGBoost...
+[SAVED MODEL] results/models/22day/000001SS/XGBoost.joblib
+[SUCCESS] 22day | 000001.SS | XGBoost
+
+Benchmark run complete.
+Successful experiments: 7 | Failed experiments: 0 | Total attempted: 7
+[24/24] DONE    model=XGBoost horizon=22day
+
+==============================================================
+  PART 1 COMPLETE
+==============================================================
+Fitted models : results/models/<horizon>/<index>/<Model>.joblib
+Metrics       : results/metrics/metrics.csv
+Predictions   : results/predictions/predictions_<horizon>.csv
+
+NOTE: HistoricalVolatility and Persistence are rule-based and have no
+      fitted estimator; the runner prints [NO MODEL FILE] for them.

@@ -1,0 +1,7 @@
+{
+  "d_model": 32,
+  "num_heads": 8,
+  "num_layers": 3,
+  "dropout": 0.22600357429738616,
+  "learning_rate": 8.384766597505193e-05
+}

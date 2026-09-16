@@ -1,0 +1,7 @@
+{
+  "hidden_units": 128,
+  "num_layers": 2,
+  "dropout": 0.1132128949169623,
+  "learning_rate": 0.00012360915872111394,
+  "batch_size": 16
+}

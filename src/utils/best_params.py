@@ -156,7 +156,7 @@ def best_params_path(model_name, horizon):
 
     stem = STUDY_STEMS[model_name]
 
-    return BEST_PARAMS_DIR / f"best_params_{stem}_{horizon}.json"
+    return BEST_PARAMS_DIR / f"best_params_{stem.replace("_", "")}_{horizon}.json"
 
 
 def load_best_params(model_name, horizon):

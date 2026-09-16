@@ -2,31 +2,31 @@
   "sequence_length": 30,
   "original_shapes": {
     "train": [
-      3802,
+      3616,
       37
     ],
     "validation": [
-      814,
+      781,
       37
     ],
     "test": [
-      816,
+      1035,
       37
     ]
   },
   "sequence_shapes": {
     "train": [
-      3773,
+      3587,
       30,
       36
     ],
     "validation": [
-      785,
+      752,
       30,
       36
     ],
     "test": [
-      787,
+      1006,
       30,
       36
     ]
