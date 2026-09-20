@@ -339,17 +339,9 @@ def build_and_save_from_split_dir(
 
 
 if __name__ == "__main__":
-    default_split_dir = os.path.join("data", "splits", "1day")
-    result, outputs = build_and_save_from_split_dir(default_split_dir)
-    print("Sequence dataset creation complete.")
-    print(f"Original training shape: {result.metadata['original_shapes']['train']}")
-    print(f"Sequence training shape: {result.metadata['sequence_shapes']['train']}")
-    print(f"Original validation shape: {result.metadata['original_shapes']['validation']}")
-    print(f"Sequence validation shape: {result.metadata['sequence_shapes']['validation']}")
-    print(f"Original test shape: {result.metadata['original_shapes']['test']}")
-    print(f"Sequence test shape: {result.metadata['sequence_shapes']['test']}")
-    print(f"Number of discarded rows per split: {result.metadata['discarded_rows']}")
-    print(f"Boundary crossing: {result.metadata['boundary_crossing']}")
-    print("Saved files:")
-    for name, path in outputs.items():
-        print(f"  {name}: {path}")
+    # The horizon-aware driver owns the output layout Part 2 training reads.
+    # Running this module directly used to write a single "30day" directory,
+    # which matched no loader and left the real datasets without a builder.
+    from src.features.build_plain_sequence_datasets import main as build_main
+
+    raise SystemExit(build_main())

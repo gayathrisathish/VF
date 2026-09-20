@@ -162,8 +162,9 @@ def _train_arch_model(
     if not np.isfinite(all_returns).all():
         raise ValueError("Return values must be finite in every data split.")
 
-    # Stays None when fitting fails and the fallback forecast is used, so a
-    # non-converged run is never persisted as if it were a fitted model.
+    # Stays None unless estimation converges and its forecasts are usable, so a
+    # non-converged run is never persisted as if it were a fitted model. The
+    # candidate is only promoted after every check below has passed.
     fitted_model = None
 
     try:
@@ -177,12 +178,12 @@ def _train_arch_model(
             dist="normal",
             rescale=False,
         )
-        fitted_model = model.fit(disp="off", show_warning=False)
-        if getattr(fitted_model, "convergence_flag", 0) != 0:
+        candidate_model = model.fit(disp="off", show_warning=False)
+        if getattr(candidate_model, "convergence_flag", 0) != 0:
             raise RuntimeError("ARCH optimizer did not converge.")
 
         validation_predictions, test_predictions = _forecast_out_of_sample(
-            fitted_model,
+            candidate_model,
             model_specification,
             all_returns,
             len(training_returns),
@@ -195,12 +196,15 @@ def _train_arch_model(
             or len(test_predictions) != test_size
         ):
             raise RuntimeError("ARCH forecast did not cover all observations.")
+
+        fitted_model = candidate_model
     except (
         ArithmeticError,
         RuntimeError,
         ValueError,
         np.linalg.LinAlgError,
     ) as error:
+        fitted_model = None
         warnings.warn(
             f"{model_name} fitting failed ({error}); using a stable fallback "
             "forecast.",
