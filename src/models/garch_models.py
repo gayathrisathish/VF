@@ -15,6 +15,15 @@ from src.evaluation.metrics import calculate_metrics
 
 ANNUALIZATION_FACTOR = 252
 
+# Scale applied to the returns when the optimizer fails on the original scale.
+# Daily log returns have a standard deviation near 0.015, which puts the
+# variance intercept around 1e-6 and leaves the likelihood poorly conditioned;
+# on some SciPy builds the optimizer then reports a convergence failure. The
+# same specification estimated on percentage returns is well conditioned, and
+# the estimates convert back exactly, so nothing downstream has to know that a
+# different scale was used during estimation.
+RETRY_RETURN_SCALE = 100.0
+
 
 def _validate_inputs(X_train, X_validation, X_test, y_train, index, horizon):
     """Validate data shared by all ARCH-family model functions.
@@ -65,6 +74,80 @@ def _fallback_predictions(X, index, training_target):
             return np.maximum(predictions, 0.0)
 
     return np.full(len(X), np.mean(training_target), dtype=float)
+
+
+def _build_arch_model(returns, model_specification):
+    """Construct one ARCH-family specification on the supplied return series."""
+    return arch_model(
+        returns,
+        mean="Zero",
+        vol=model_specification["vol"],
+        p=model_specification["p"],
+        o=model_specification["o"],
+        q=model_specification["q"],
+        dist="normal",
+        rescale=False,
+    )
+
+
+def _parameters_in_original_units(params, model_specification, scale):
+    """Convert estimates made on ``scale * returns`` back to the original units.
+
+    Scaling the returns by ``c`` scales the conditional variance by ``c ** 2``.
+    For the GARCH variance recursion only the intercept absorbs that factor; the
+    ARCH, asymmetry and GARCH coefficients are scale free. EGARCH models the log
+    variance, so its intercept shifts by ``2 * log(c) * (1 - persistence)``
+    instead. Both conversions are exact, not approximations.
+    """
+    converted = params.copy()
+
+    if model_specification["vol"] == "EGARCH":
+        persistence = sum(
+            value
+            for name, value in params.items()
+            if name.startswith("beta")
+        )
+        converted["omega"] = params["omega"] - 2.0 * np.log(scale) * (
+            1.0 - persistence
+        )
+    else:
+        converted["omega"] = params["omega"] / (scale ** 2)
+
+    return converted
+
+
+def _fit_on_rescaled_returns(
+    training_returns,
+    model_specification,
+    scale=RETRY_RETURN_SCALE,
+):
+    """Estimate one specification on rescaled returns, reported in original units.
+
+    Used only after the optimizer has failed on the original scale. The returned
+    object holds the maximum-likelihood estimates converted back to the original
+    units, so it forecasts and serializes exactly like a direct fit; evaluating
+    the model at those parameters estimates nothing further.
+    """
+    rescaled_fit = _build_arch_model(
+        scale * training_returns,
+        model_specification,
+    ).fit(disp="off", show_warning=False)
+
+    if getattr(rescaled_fit, "convergence_flag", 0) != 0:
+        raise RuntimeError(
+            "ARCH optimizer did not converge on the original or the rescaled "
+            "return series."
+        )
+
+    original_parameters = _parameters_in_original_units(
+        rescaled_fit.params,
+        model_specification,
+        scale,
+    )
+
+    return _build_arch_model(training_returns, model_specification).fix(
+        original_parameters
+    )
 
 
 def _forecast_out_of_sample(
@@ -180,7 +263,13 @@ def _train_arch_model(
         )
         candidate_model = model.fit(disp="off", show_warning=False)
         if getattr(candidate_model, "convergence_flag", 0) != 0:
-            raise RuntimeError("ARCH optimizer did not converge.")
+            # Retry the same specification on a better conditioned scale rather
+            # than accepting a failed optimization. Raises if that also fails,
+            # which leaves the fallback forecast and saves no checkpoint.
+            candidate_model = _fit_on_rescaled_returns(
+                training_returns,
+                model_specification,
+            )
 
         validation_predictions, test_predictions = _forecast_out_of_sample(
             candidate_model,
