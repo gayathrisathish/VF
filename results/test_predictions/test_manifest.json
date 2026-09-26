@@ -1,0 +1,4332 @@
+{
+  "generated": "2026-09-24T07:37:36.439413+00:00",
+  "sequence_length": 30,
+  "experiments": [
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/GARCH.joblib",
+        "bytes": 339670,
+        "modified": "2026-09-18T07:17:08.540845+00:00",
+        "sha256_prefix": "b251a6d945312808"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/EGARCH.joblib",
+        "bytes": 431254,
+        "modified": "2026-09-18T07:17:08.539906+00:00",
+        "sha256_prefix": "52ec9b4ef9cc367a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/GJRGARCH.joblib",
+        "bytes": 339758,
+        "modified": "2026-09-18T07:17:08.555908+00:00",
+        "sha256_prefix": "d4d3bd25f11d5e6d"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:08.562524+00:00",
+        "sha256_prefix": "fa3aa696f4ea432e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/RandomForest.joblib",
+        "bytes": 34619866,
+        "modified": "2026-09-18T07:17:08.647143+00:00",
+        "sha256_prefix": "3510da57913d5769"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/XGBoost.joblib",
+        "bytes": 367775,
+        "modified": "2026-09-18T07:17:08.649386+00:00",
+        "sha256_prefix": "1cfbc8022847eacf"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/LSTM.keras",
+        "bytes": 1038043,
+        "modified": "2026-09-18T07:17:08.562076+00:00",
+        "sha256_prefix": "b726062ca7e98da6"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/GRU.keras",
+        "bytes": 262350,
+        "modified": "2026-09-18T07:17:08.557604+00:00",
+        "sha256_prefix": "b819724fbdf71541"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-18T07:17:08.648804+00:00",
+        "sha256_prefix": "4e4abb80a377a86b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/GARCHLSTM.keras",
+        "bytes": 339928,
+        "modified": "2026-09-20T05:24:38.942999+00:00",
+        "sha256_prefix": "2ae3f59f8ae84d33"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/GARCHGRU.keras",
+        "bytes": 1994972,
+        "modified": "2026-09-20T05:24:38.939153+00:00",
+        "sha256_prefix": "ee974760df3e8180"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GSPC",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GSPC/GARCHTransformer.keras",
+        "bytes": 500895,
+        "modified": "2026-09-20T05:24:38.946820+00:00",
+        "sha256_prefix": "4779525c57fb61b2"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/GARCH.joblib",
+        "bytes": 339670,
+        "modified": "2026-09-18T07:17:08.761899+00:00",
+        "sha256_prefix": "12a55e56eed9e241"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/EGARCH.joblib",
+        "bytes": 431254,
+        "modified": "2026-09-18T07:17:08.760967+00:00",
+        "sha256_prefix": "32eabc49ce7bac10"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/GJRGARCH.joblib",
+        "bytes": 339758,
+        "modified": "2026-09-18T07:17:08.778072+00:00",
+        "sha256_prefix": "a6229e0fc7ed9b07"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:08.785620+00:00",
+        "sha256_prefix": "92eb16e8b2152ffc"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/RandomForest.joblib",
+        "bytes": 34621018,
+        "modified": "2026-09-18T07:17:08.968002+00:00",
+        "sha256_prefix": "1cdc11d39bfa547c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/XGBoost.joblib",
+        "bytes": 381592,
+        "modified": "2026-09-18T07:17:08.970722+00:00",
+        "sha256_prefix": "190b27f222ea0a4f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/LSTM.keras",
+        "bytes": 1038043,
+        "modified": "2026-09-18T07:17:08.784736+00:00",
+        "sha256_prefix": "5cae0dcd0d61186c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/GRU.keras",
+        "bytes": 262350,
+        "modified": "2026-09-18T07:17:08.779287+00:00",
+        "sha256_prefix": "0d026afb232b0476"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-18T07:17:08.970134+00:00",
+        "sha256_prefix": "8d9cf66b3b91f340"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/GARCHLSTM.keras",
+        "bytes": 339928,
+        "modified": "2026-09-20T05:24:38.977290+00:00",
+        "sha256_prefix": "7bf97d22e8201915"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/GARCHGRU.keras",
+        "bytes": 1994972,
+        "modified": "2026-09-20T05:24:38.975795+00:00",
+        "sha256_prefix": "b42322c991918ab7"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^IXIC",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/IXIC/GARCHTransformer.keras",
+        "bytes": 500895,
+        "modified": "2026-09-20T05:24:38.985269+00:00",
+        "sha256_prefix": "7a8cc2014b7f131e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/GARCH.joblib",
+        "bytes": 339670,
+        "modified": "2026-09-18T07:17:08.367547+00:00",
+        "sha256_prefix": "b0143ee894f2c027"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/EGARCH.joblib",
+        "bytes": 431254,
+        "modified": "2026-09-18T07:17:08.366700+00:00",
+        "sha256_prefix": "c03e0af01e85cdf1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/GJRGARCH.joblib",
+        "bytes": 339758,
+        "modified": "2026-09-18T07:17:08.381001+00:00",
+        "sha256_prefix": "50fb897e664754e1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:08.386376+00:00",
+        "sha256_prefix": "62097a9fca9e2b07"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/RandomForest.joblib",
+        "bytes": 34635706,
+        "modified": "2026-09-18T07:17:08.428945+00:00",
+        "sha256_prefix": "3715e8c42b94400e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/XGBoost.joblib",
+        "bytes": 380774,
+        "modified": "2026-09-18T07:17:08.430546+00:00",
+        "sha256_prefix": "1ef1cce97b54bd4b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/LSTM.keras",
+        "bytes": 1038043,
+        "modified": "2026-09-18T07:17:08.386215+00:00",
+        "sha256_prefix": "a5bc80b875f7db38"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/GRU.keras",
+        "bytes": 262350,
+        "modified": "2026-09-18T07:17:08.381899+00:00",
+        "sha256_prefix": "37679ba7a85ccd61"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-18T07:17:08.429986+00:00",
+        "sha256_prefix": "de12e5ba16ae3fdc"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/GARCHLSTM.keras",
+        "bytes": 339928,
+        "modified": "2026-09-20T05:24:38.907387+00:00",
+        "sha256_prefix": "c177d70e5069dbe1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/GARCHGRU.keras",
+        "bytes": 1994972,
+        "modified": "2026-09-20T05:24:38.904536+00:00",
+        "sha256_prefix": "104501a5c407cda6"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^FTSE",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/FTSE/GARCHTransformer.keras",
+        "bytes": 500895,
+        "modified": "2026-09-20T05:24:38.911166+00:00",
+        "sha256_prefix": "7229e5b511dfad3a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/GARCH.joblib",
+        "bytes": 339670,
+        "modified": "2026-09-18T07:17:08.433728+00:00",
+        "sha256_prefix": "906045c2caa99b59"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/EGARCH.joblib",
+        "bytes": 431254,
+        "modified": "2026-09-18T07:17:08.432594+00:00",
+        "sha256_prefix": "ad0d9ee034144cfc"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/GJRGARCH.joblib",
+        "bytes": 339774,
+        "modified": "2026-09-18T07:17:08.448265+00:00",
+        "sha256_prefix": "ff648b308add1932"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:08.454733+00:00",
+        "sha256_prefix": "249275099d1bc0d1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/RandomForest.joblib",
+        "bytes": 34633258,
+        "modified": "2026-09-18T07:17:08.534200+00:00",
+        "sha256_prefix": "97af9f44592329dd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/XGBoost.joblib",
+        "bytes": 392203,
+        "modified": "2026-09-18T07:17:08.538779+00:00",
+        "sha256_prefix": "54d295d105b169d7"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/LSTM.keras",
+        "bytes": 1038043,
+        "modified": "2026-09-18T07:17:08.454590+00:00",
+        "sha256_prefix": "dc9d0aa82ecac924"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/GRU.keras",
+        "bytes": 262350,
+        "modified": "2026-09-18T07:17:08.449866+00:00",
+        "sha256_prefix": "dabd41459eed48a8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-18T07:17:08.537896+00:00",
+        "sha256_prefix": "6bf14f7e918293ab"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/GARCHLSTM.keras",
+        "bytes": 339928,
+        "modified": "2026-09-20T05:24:38.922856+00:00",
+        "sha256_prefix": "9002f240ed1c9442"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/GARCHGRU.keras",
+        "bytes": 1994972,
+        "modified": "2026-09-20T05:24:38.920209+00:00",
+        "sha256_prefix": "5838891c9db2f9ce"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^GDAXI",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/GDAXI/GARCHTransformer.keras",
+        "bytes": 500895,
+        "modified": "2026-09-20T05:24:38.927543+00:00",
+        "sha256_prefix": "6a40f074bfae5a85"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/GARCH.joblib",
+        "bytes": 339670,
+        "modified": "2026-09-18T07:17:08.972419+00:00",
+        "sha256_prefix": "de0902d1d5867e24"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/EGARCH.joblib",
+        "bytes": 431254,
+        "modified": "2026-09-18T07:17:08.971694+00:00",
+        "sha256_prefix": "9a01f1c2f856f125"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/GJRGARCH.joblib",
+        "bytes": 339774,
+        "modified": "2026-09-18T07:17:08.986475+00:00",
+        "sha256_prefix": "3a91e00d1f8b4a19"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:08.993293+00:00",
+        "sha256_prefix": "b8da472b2c568385"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/RandomForest.joblib",
+        "bytes": 34612522,
+        "modified": "2026-09-18T07:17:09.064180+00:00",
+        "sha256_prefix": "fcfc45e69980aafe"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/XGBoost.joblib",
+        "bytes": 374721,
+        "modified": "2026-09-18T07:17:09.066199+00:00",
+        "sha256_prefix": "0c9d7d2a59259cd8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/LSTM.keras",
+        "bytes": 1038043,
+        "modified": "2026-09-18T07:17:08.992990+00:00",
+        "sha256_prefix": "a55e05ea87cd13f3"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/GRU.keras",
+        "bytes": 262350,
+        "modified": "2026-09-18T07:17:08.987491+00:00",
+        "sha256_prefix": "2bda4b26da809d65"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-18T07:17:09.065146+00:00",
+        "sha256_prefix": "82770f42afe4f272"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/GARCHLSTM.keras",
+        "bytes": 339928,
+        "modified": "2026-09-20T05:24:38.999720+00:00",
+        "sha256_prefix": "d0212fd212483d12"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/GARCHGRU.keras",
+        "bytes": 1994972,
+        "modified": "2026-09-20T05:24:38.995433+00:00",
+        "sha256_prefix": "4ceff298540553b8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^N225",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/N225/GARCHTransformer.keras",
+        "bytes": 500895,
+        "modified": "2026-09-20T05:24:39.004390+00:00",
+        "sha256_prefix": "118944b38617f3cd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/GARCH.joblib",
+        "bytes": 339654,
+        "modified": "2026-09-18T07:17:08.651656+00:00",
+        "sha256_prefix": "e3185c9d85d509df"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/EGARCH.joblib",
+        "bytes": 431254,
+        "modified": "2026-09-18T07:17:08.650632+00:00",
+        "sha256_prefix": "d49fcce9ccabc414"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/GJRGARCH.joblib",
+        "bytes": 339774,
+        "modified": "2026-09-18T07:17:08.666650+00:00",
+        "sha256_prefix": "7c2dd93fe96c3627"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:08.673138+00:00",
+        "sha256_prefix": "37d7aa843719dbbd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/RandomForest.joblib",
+        "bytes": 34615834,
+        "modified": "2026-09-18T07:17:08.756222+00:00",
+        "sha256_prefix": "a145ea9968085290"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/XGBoost.joblib",
+        "bytes": 392622,
+        "modified": "2026-09-18T07:17:08.759842+00:00",
+        "sha256_prefix": "d28272de5f43f52e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/LSTM.keras",
+        "bytes": 1038043,
+        "modified": "2026-09-18T07:17:08.672979+00:00",
+        "sha256_prefix": "a1625980b723606f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/GRU.keras",
+        "bytes": 262350,
+        "modified": "2026-09-18T07:17:08.667815+00:00",
+        "sha256_prefix": "1d57fd668215feca"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-18T07:17:08.758708+00:00",
+        "sha256_prefix": "f843638435e50f9e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/GARCHLSTM.keras",
+        "bytes": 339928,
+        "modified": "2026-09-20T05:24:38.958865+00:00",
+        "sha256_prefix": "e7921db6081687f8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/GARCHGRU.keras",
+        "bytes": 1994972,
+        "modified": "2026-09-20T05:24:38.956154+00:00",
+        "sha256_prefix": "faf3fd223afeddfa"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "^HSI",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/HSI/GARCHTransformer.keras",
+        "bytes": 500895,
+        "modified": "2026-09-20T05:24:38.962185+00:00",
+        "sha256_prefix": "ef1e2b2b3bf7fe53"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/GARCH.joblib",
+        "bytes": 339654,
+        "modified": "2026-09-18T07:17:08.202124+00:00",
+        "sha256_prefix": "fff3cf93be75d77c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/EGARCH.joblib",
+        "bytes": 431254,
+        "modified": "2026-09-18T07:17:08.201002+00:00",
+        "sha256_prefix": "2d1ece8f612621cd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/GJRGARCH.joblib",
+        "bytes": 339774,
+        "modified": "2026-09-18T07:17:08.215392+00:00",
+        "sha256_prefix": "3187dda38ec7f474"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:08.221036+00:00",
+        "sha256_prefix": "8336de4b17deb48e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/RandomForest.joblib",
+        "bytes": 34615978,
+        "modified": "2026-09-18T07:17:08.362316+00:00",
+        "sha256_prefix": "f0d653227be2e59a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-10",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/XGBoost.joblib",
+        "bytes": 401462,
+        "modified": "2026-09-18T07:17:08.365047+00:00",
+        "sha256_prefix": "1f92ac9d6ada334e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/LSTM.keras",
+        "bytes": 1038043,
+        "modified": "2026-09-18T07:17:08.220896+00:00",
+        "sha256_prefix": "984bbd288530b85b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/GRU.keras",
+        "bytes": 262350,
+        "modified": "2026-09-18T07:17:08.216394+00:00",
+        "sha256_prefix": "640c633b2fd8d52c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-18T07:17:08.363624+00:00",
+        "sha256_prefix": "5f5001c3a32d9866"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/GARCHLSTM.keras",
+        "bytes": 339928,
+        "modified": "2026-09-20T05:24:38.892932+00:00",
+        "sha256_prefix": "178bcda37aec39cf"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/GARCHGRU.keras",
+        "bytes": 1994972,
+        "modified": "2026-09-20T05:24:38.887214+00:00",
+        "sha256_prefix": "83105b0e5cd46609"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "1day",
+      "index": "000001.SS",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-21",
+      "test_end": "2025-12-29",
+      "checkpoint": {
+        "path": "results/models/1day/000001SS/GARCHTransformer.keras",
+        "bytes": 500895,
+        "modified": "2026-09-20T05:24:38.896031+00:00",
+        "sha256_prefix": "dba2b2d4d975d8d5"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/GARCH.joblib",
+        "bytes": 339350,
+        "modified": "2026-09-18T07:17:11.624124+00:00",
+        "sha256_prefix": "1cdd7202d1561e8c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/EGARCH.joblib",
+        "bytes": 430838,
+        "modified": "2026-09-18T07:17:11.623450+00:00",
+        "sha256_prefix": "56eaa7cc9a5b98ff"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/GJRGARCH.joblib",
+        "bytes": 339470,
+        "modified": "2026-09-24T07:27:39.327916+00:00",
+        "sha256_prefix": "5383012d25054597"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:11.777203+00:00",
+        "sha256_prefix": "1d8a2f04e0e14a2a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/RandomForest.joblib",
+        "bytes": 34594666,
+        "modified": "2026-09-18T07:17:11.884312+00:00",
+        "sha256_prefix": "1677ab22c986dc23"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/XGBoost.joblib",
+        "bytes": 407110,
+        "modified": "2026-09-18T07:17:11.888456+00:00",
+        "sha256_prefix": "b8f6514d602558a8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/LSTM.keras",
+        "bytes": 16249872,
+        "modified": "2026-09-23T14:13:07.924713+00:00",
+        "sha256_prefix": "fa08d10cc67488ed"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/GRU.keras",
+        "bytes": 12228595,
+        "modified": "2026-09-23T14:13:07.813371+00:00",
+        "sha256_prefix": "4f31ca11601b432c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/Transformer.keras",
+        "bytes": 213863,
+        "modified": "2026-09-23T14:13:07.939767+00:00",
+        "sha256_prefix": "8488e1ab2a8a69f8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/GARCHLSTM.keras",
+        "bytes": 2633968,
+        "modified": "2026-09-20T05:24:40.354175+00:00",
+        "sha256_prefix": "d5267893d7cd533b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/GARCHGRU.keras",
+        "bytes": 1994975,
+        "modified": "2026-09-20T05:24:40.344777+00:00",
+        "sha256_prefix": "0650ad25110087c4"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GSPC",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GSPC/GARCHTransformer.keras",
+        "bytes": 643964,
+        "modified": "2026-09-20T05:24:40.358256+00:00",
+        "sha256_prefix": "ec2a65456869f88b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/GARCH.joblib",
+        "bytes": 339366,
+        "modified": "2026-09-18T07:17:12.123890+00:00",
+        "sha256_prefix": "498cd863783ed62c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/EGARCH.joblib",
+        "bytes": 430838,
+        "modified": "2026-09-18T07:17:12.123149+00:00",
+        "sha256_prefix": "10f850b51ae51150"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/GJRGARCH.joblib",
+        "bytes": 339470,
+        "modified": "2026-09-24T07:27:39.329119+00:00",
+        "sha256_prefix": "6aee65b7b9479fe9"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:12.262250+00:00",
+        "sha256_prefix": "4b0e070aa3046da0"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/RandomForest.joblib",
+        "bytes": 34597690,
+        "modified": "2026-09-18T07:17:12.346632+00:00",
+        "sha256_prefix": "e8aac8a87878b1fd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/XGBoost.joblib",
+        "bytes": 409420,
+        "modified": "2026-09-18T07:17:12.348183+00:00",
+        "sha256_prefix": "d4571fea9a53e391"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/LSTM.keras",
+        "bytes": 16249872,
+        "modified": "2026-09-23T14:13:08.370106+00:00",
+        "sha256_prefix": "eab9dd9adc89b6d9"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/GRU.keras",
+        "bytes": 12228595,
+        "modified": "2026-09-23T14:13:08.265714+00:00",
+        "sha256_prefix": "774e80d09ae6bfd1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/Transformer.keras",
+        "bytes": 213863,
+        "modified": "2026-09-23T14:13:08.372829+00:00",
+        "sha256_prefix": "9724b9e61ded6766"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/GARCHLSTM.keras",
+        "bytes": 2633968,
+        "modified": "2026-09-20T05:24:40.387490+00:00",
+        "sha256_prefix": "5d32b79c851d221a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/GARCHGRU.keras",
+        "bytes": 1994975,
+        "modified": "2026-09-20T05:24:40.380338+00:00",
+        "sha256_prefix": "2a9d21643cdd188e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^IXIC",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/IXIC/GARCHTransformer.keras",
+        "bytes": 643964,
+        "modified": "2026-09-20T05:24:40.390524+00:00",
+        "sha256_prefix": "40161d938502aa0e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/GARCH.joblib",
+        "bytes": 339350,
+        "modified": "2026-09-18T07:17:11.141537+00:00",
+        "sha256_prefix": "471cf50e45d5f42f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/EGARCH.joblib",
+        "bytes": 430838,
+        "modified": "2026-09-18T07:17:11.140961+00:00",
+        "sha256_prefix": "c267d25bad31d308"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/GJRGARCH.joblib",
+        "bytes": 339454,
+        "modified": "2026-09-24T07:27:39.326787+00:00",
+        "sha256_prefix": "fc88508dc91ff5be"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:11.305224+00:00",
+        "sha256_prefix": "64454311c1294b23"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/RandomForest.joblib",
+        "bytes": 34608922,
+        "modified": "2026-09-18T07:17:11.386660+00:00",
+        "sha256_prefix": "ac775e1e00884273"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/XGBoost.joblib",
+        "bytes": 394310,
+        "modified": "2026-09-18T07:17:11.388883+00:00",
+        "sha256_prefix": "92669981609804f9"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/LSTM.keras",
+        "bytes": 16249872,
+        "modified": "2026-09-23T14:13:07.487942+00:00",
+        "sha256_prefix": "9d9bdbd4b17cbcfb"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/GRU.keras",
+        "bytes": 12228595,
+        "modified": "2026-09-23T14:13:07.379610+00:00",
+        "sha256_prefix": "a8f776f50c2fcf2d"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/Transformer.keras",
+        "bytes": 213863,
+        "modified": "2026-09-23T14:13:07.500602+00:00",
+        "sha256_prefix": "98b59f76173a4adb"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/GARCHLSTM.keras",
+        "bytes": 2633968,
+        "modified": "2026-09-20T05:24:40.318797+00:00",
+        "sha256_prefix": "9363509aafe08f2d"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/GARCHGRU.keras",
+        "bytes": 1994975,
+        "modified": "2026-09-20T05:24:40.311631+00:00",
+        "sha256_prefix": "a5a03fafe71ad176"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^FTSE",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/FTSE/GARCHTransformer.keras",
+        "bytes": 643964,
+        "modified": "2026-09-20T05:24:40.322035+00:00",
+        "sha256_prefix": "de5d3987fa87724b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/GARCH.joblib",
+        "bytes": 339350,
+        "modified": "2026-09-18T07:17:11.390372+00:00",
+        "sha256_prefix": "5ac7d1030221d17b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/EGARCH.joblib",
+        "bytes": 430838,
+        "modified": "2026-09-18T07:17:11.389763+00:00",
+        "sha256_prefix": "3fb4992fe93eda90"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/GJRGARCH.joblib",
+        "bytes": 339454,
+        "modified": "2026-09-24T07:27:39.327323+00:00",
+        "sha256_prefix": "60713fc6e8774433"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:11.528453+00:00",
+        "sha256_prefix": "18303f9056b33331"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/RandomForest.joblib",
+        "bytes": 34607914,
+        "modified": "2026-09-18T07:17:11.620923+00:00",
+        "sha256_prefix": "6efffdac5f1e7e5f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/XGBoost.joblib",
+        "bytes": 416776,
+        "modified": "2026-09-18T07:17:11.622592+00:00",
+        "sha256_prefix": "f59fe7e81339c2fd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/LSTM.keras",
+        "bytes": 16249872,
+        "modified": "2026-09-23T14:13:07.706634+00:00",
+        "sha256_prefix": "5cefcee9083450bb"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/GRU.keras",
+        "bytes": 12228595,
+        "modified": "2026-09-23T14:13:07.596590+00:00",
+        "sha256_prefix": "4de4c422593a81b9"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/Transformer.keras",
+        "bytes": 213863,
+        "modified": "2026-09-23T14:13:07.711747+00:00",
+        "sha256_prefix": "ed46e304c385e11f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/GARCHLSTM.keras",
+        "bytes": 2633968,
+        "modified": "2026-09-20T05:24:40.334350+00:00",
+        "sha256_prefix": "cbe11c7c4798c0d0"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/GARCHGRU.keras",
+        "bytes": 1994975,
+        "modified": "2026-09-20T05:24:40.328034+00:00",
+        "sha256_prefix": "040fb7d82c69243d"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^GDAXI",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/GDAXI/GARCHTransformer.keras",
+        "bytes": 643964,
+        "modified": "2026-09-20T05:24:40.340065+00:00",
+        "sha256_prefix": "63d14d799488940f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/GARCH.joblib",
+        "bytes": 339366,
+        "modified": "2026-09-18T07:17:12.349859+00:00",
+        "sha256_prefix": "b5f027ac8662bbf1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/EGARCH.joblib",
+        "bytes": 430838,
+        "modified": "2026-09-18T07:17:12.349351+00:00",
+        "sha256_prefix": "fc6151a8f70243bf"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/GJRGARCH.joblib",
+        "bytes": 339470,
+        "modified": "2026-09-24T07:27:39.329679+00:00",
+        "sha256_prefix": "4aafe3abb3b86c75"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:12.482988+00:00",
+        "sha256_prefix": "59ad8944af33767e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/RandomForest.joblib",
+        "bytes": 34589914,
+        "modified": "2026-09-18T07:17:12.526316+00:00",
+        "sha256_prefix": "8ccfeae325585e01"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/XGBoost.joblib",
+        "bytes": 404796,
+        "modified": "2026-09-18T07:17:12.528149+00:00",
+        "sha256_prefix": "f37d65641ac999ee"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/LSTM.keras",
+        "bytes": 16249872,
+        "modified": "2026-09-23T14:13:08.516765+00:00",
+        "sha256_prefix": "902f519b8b28455b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/GRU.keras",
+        "bytes": 12228595,
+        "modified": "2026-09-23T14:13:08.472529+00:00",
+        "sha256_prefix": "fb0fed43fc4c68f0"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/Transformer.keras",
+        "bytes": 213863,
+        "modified": "2026-09-23T14:13:08.518155+00:00",
+        "sha256_prefix": "51b9569c70f3458f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/GARCHLSTM.keras",
+        "bytes": 2633968,
+        "modified": "2026-09-20T05:24:40.401658+00:00",
+        "sha256_prefix": "421cfc36d24dfdd6"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/GARCHGRU.keras",
+        "bytes": 1994975,
+        "modified": "2026-09-20T05:24:40.395349+00:00",
+        "sha256_prefix": "d37cb188e3003453"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^N225",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/N225/GARCHTransformer.keras",
+        "bytes": 643964,
+        "modified": "2026-09-20T05:24:40.404375+00:00",
+        "sha256_prefix": "fe0b6b58e403f54a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/GARCH.joblib",
+        "bytes": 339350,
+        "modified": "2026-09-18T07:17:11.890772+00:00",
+        "sha256_prefix": "24f5357607ade1b2"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/EGARCH.joblib",
+        "bytes": 430838,
+        "modified": "2026-09-18T07:17:11.890174+00:00",
+        "sha256_prefix": "6cb0c3678516b2cd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/GJRGARCH.joblib",
+        "bytes": 339470,
+        "modified": "2026-09-24T07:27:39.328500+00:00",
+        "sha256_prefix": "465b4d6384c7feb1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:12.031750+00:00",
+        "sha256_prefix": "72823aa11d66342a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/RandomForest.joblib",
+        "bytes": 34591930,
+        "modified": "2026-09-18T07:17:12.120227+00:00",
+        "sha256_prefix": "deaec7a1ab93873c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/XGBoost.joblib",
+        "bytes": 405812,
+        "modified": "2026-09-18T07:17:12.122179+00:00",
+        "sha256_prefix": "66d54e2e55ad395a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/LSTM.keras",
+        "bytes": 16249872,
+        "modified": "2026-09-23T14:13:08.143099+00:00",
+        "sha256_prefix": "0b7bb464d78d77bd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/GRU.keras",
+        "bytes": 12228595,
+        "modified": "2026-09-23T14:13:08.033695+00:00",
+        "sha256_prefix": "c968fdb11f73d658"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/Transformer.keras",
+        "bytes": 213863,
+        "modified": "2026-09-23T14:13:08.152461+00:00",
+        "sha256_prefix": "f6cb17104d44a7ce"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/GARCHLSTM.keras",
+        "bytes": 2633968,
+        "modified": "2026-09-20T05:24:40.369748+00:00",
+        "sha256_prefix": "7a97a91c90393e2e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/GARCHGRU.keras",
+        "bytes": 1994975,
+        "modified": "2026-09-20T05:24:40.363049+00:00",
+        "sha256_prefix": "b5736a8d15b0c563"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "^HSI",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/HSI/GARCHTransformer.keras",
+        "bytes": 643964,
+        "modified": "2026-09-20T05:24:40.374627+00:00",
+        "sha256_prefix": "a9cfe32a0640991a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "HistoricalVolatility",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "Persistence",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "GARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/GARCH.joblib",
+        "bytes": 339350,
+        "modified": "2026-09-18T07:17:10.937962+00:00",
+        "sha256_prefix": "14afb43b3597891f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "EGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/EGARCH.joblib",
+        "bytes": 430838,
+        "modified": "2026-09-18T07:17:10.937471+00:00",
+        "sha256_prefix": "cf06b5fb4558c771"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "GJRGARCH",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/GJRGARCH.joblib",
+        "bytes": 278046,
+        "modified": "2026-09-24T07:27:39.326062+00:00",
+        "sha256_prefix": "53c59cb8d872b3b7"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "LinearRegression",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:11.090131+00:00",
+        "sha256_prefix": "68c615a235527573"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "RandomForest",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/RandomForest.joblib",
+        "bytes": 34588762,
+        "modified": "2026-09-18T07:17:11.137625+00:00",
+        "sha256_prefix": "28d6f869989659fb"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "XGBoost",
+      "rows": 816,
+      "test_start": "2022-11-04",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/XGBoost.joblib",
+        "bytes": 406432,
+        "modified": "2026-09-18T07:17:11.139693+00:00",
+        "sha256_prefix": "9ce30262f3478237"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "LSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/LSTM.keras",
+        "bytes": 16249872,
+        "modified": "2026-09-23T14:13:07.252049+00:00",
+        "sha256_prefix": "235dba7a16c2040b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "GRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/GRU.keras",
+        "bytes": 12228595,
+        "modified": "2026-09-23T14:13:07.141639+00:00",
+        "sha256_prefix": "52aaa8ea50ade5a3"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "Transformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/Transformer.keras",
+        "bytes": 213863,
+        "modified": "2026-09-23T14:13:07.253915+00:00",
+        "sha256_prefix": "d2f82e0d077a85b8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "GARCHLSTM",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/GARCHLSTM.keras",
+        "bytes": 2633968,
+        "modified": "2026-09-20T05:24:40.302328+00:00",
+        "sha256_prefix": "3a833d0bd9e0408b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "GARCHGRU",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/GARCHGRU.keras",
+        "bytes": 1994975,
+        "modified": "2026-09-20T05:24:40.296176+00:00",
+        "sha256_prefix": "c216f91780aba9dc"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "5day",
+      "index": "000001.SS",
+      "model": "GARCHTransformer",
+      "rows": 787,
+      "test_start": "2022-12-15",
+      "test_end": "2025-12-23",
+      "checkpoint": {
+        "path": "results/models/5day/000001SS/GARCHTransformer.keras",
+        "bytes": 643964,
+        "modified": "2026-09-20T05:24:40.305969+00:00",
+        "sha256_prefix": "e19d9368df15e9a1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "HistoricalVolatility",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "Persistence",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "GARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/GARCH.joblib",
+        "bytes": 338294,
+        "modified": "2026-09-18T07:17:09.853970+00:00",
+        "sha256_prefix": "0a05fd4c47737413"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "EGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/EGARCH.joblib",
+        "bytes": 429494,
+        "modified": "2026-09-18T07:17:09.853396+00:00",
+        "sha256_prefix": "fc8fd03d8021f02b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "GJRGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/GJRGARCH.joblib",
+        "bytes": 338414,
+        "modified": "2026-09-18T07:17:09.992375+00:00",
+        "sha256_prefix": "3def2acba66a31af"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "LinearRegression",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:10.017985+00:00",
+        "sha256_prefix": "7547a82896a5ecb4"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "RandomForest",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/RandomForest.joblib",
+        "bytes": 34479034,
+        "modified": "2026-09-18T07:17:10.130091+00:00",
+        "sha256_prefix": "57d58ee5d83be102"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "XGBoost",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/XGBoost.joblib",
+        "bytes": 417587,
+        "modified": "2026-09-18T07:17:10.134101+00:00",
+        "sha256_prefix": "2ceccfd467b1844c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "LSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/LSTM.keras",
+        "bytes": 2627825,
+        "modified": "2026-09-23T14:13:06.912702+00:00",
+        "sha256_prefix": "c80916fb54c991af"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "GRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/GRU.keras",
+        "bytes": 3190771,
+        "modified": "2026-09-23T14:13:06.893417+00:00",
+        "sha256_prefix": "545f410a811b2a9b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "Transformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-23T14:13:06.920005+00:00",
+        "sha256_prefix": "979d7f5c27669792"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "GARCHLSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/GARCHLSTM.keras",
+        "bytes": 16262157,
+        "modified": "2026-09-20T05:24:39.842376+00:00",
+        "sha256_prefix": "4d0f9d14d9f8f297"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "GARCHGRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/GARCHGRU.keras",
+        "bytes": 12237808,
+        "modified": "2026-09-20T05:24:39.740750+00:00",
+        "sha256_prefix": "6a2b40a7ee8c0024"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GSPC",
+      "model": "GARCHTransformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GSPC/GARCHTransformer.keras",
+        "bytes": 357001,
+        "modified": "2026-09-20T05:24:39.861626+00:00",
+        "sha256_prefix": "b678075c231c0957"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "HistoricalVolatility",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "Persistence",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "GARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/GARCH.joblib",
+        "bytes": 338294,
+        "modified": "2026-09-18T07:17:10.375937+00:00",
+        "sha256_prefix": "cf46241bb1e8e0ad"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "EGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/EGARCH.joblib",
+        "bytes": 429494,
+        "modified": "2026-09-18T07:17:10.375359+00:00",
+        "sha256_prefix": "a6c6518ea944ed0b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "GJRGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/GJRGARCH.joblib",
+        "bytes": 338398,
+        "modified": "2026-09-18T07:17:10.502628+00:00",
+        "sha256_prefix": "703871689ed4576e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "LinearRegression",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:10.529685+00:00",
+        "sha256_prefix": "c25c24cbd654c5fc"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "RandomForest",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/RandomForest.joblib",
+        "bytes": 34481626,
+        "modified": "2026-09-18T07:17:10.635137+00:00",
+        "sha256_prefix": "47abb8d338359c12"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "XGBoost",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/XGBoost.joblib",
+        "bytes": 409285,
+        "modified": "2026-09-18T07:17:10.637029+00:00",
+        "sha256_prefix": "8e43ebb91145802f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "LSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/LSTM.keras",
+        "bytes": 2627825,
+        "modified": "2026-09-23T14:13:07.000648+00:00",
+        "sha256_prefix": "fa8ebc9147303424"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "GRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/GRU.keras",
+        "bytes": 3190771,
+        "modified": "2026-09-23T14:13:06.980430+00:00",
+        "sha256_prefix": "4770090fd68e5cd9"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "Transformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-23T14:13:07.005873+00:00",
+        "sha256_prefix": "4f1f32c790e977fe"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "GARCHLSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/GARCHLSTM.keras",
+        "bytes": 16262157,
+        "modified": "2026-09-20T05:24:40.193784+00:00",
+        "sha256_prefix": "8c3b0f96f41e0fe5"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "GARCHGRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/GARCHGRU.keras",
+        "bytes": 12237808,
+        "modified": "2026-09-20T05:24:40.145293+00:00",
+        "sha256_prefix": "f89c2aa517caf2a4"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^IXIC",
+      "model": "GARCHTransformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/IXIC/GARCHTransformer.keras",
+        "bytes": 357001,
+        "modified": "2026-09-20T05:24:40.199641+00:00",
+        "sha256_prefix": "5669266bfe446ecd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "HistoricalVolatility",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "Persistence",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "GARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/GARCH.joblib",
+        "bytes": 338310,
+        "modified": "2026-09-18T07:17:09.353249+00:00",
+        "sha256_prefix": "136719f1ba109b8f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "EGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/EGARCH.joblib",
+        "bytes": 429494,
+        "modified": "2026-09-18T07:17:09.352708+00:00",
+        "sha256_prefix": "883f53e6b9435304"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "GJRGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/GJRGARCH.joblib",
+        "bytes": 338398,
+        "modified": "2026-09-18T07:17:09.494812+00:00",
+        "sha256_prefix": "5ca96315959bebf6"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "LinearRegression",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:09.524111+00:00",
+        "sha256_prefix": "e6427c5df27a0253"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "RandomForest",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/RandomForest.joblib",
+        "bytes": 34501930,
+        "modified": "2026-09-18T07:17:09.603812+00:00",
+        "sha256_prefix": "e37901c7b3fd424c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "XGBoost",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/XGBoost.joblib",
+        "bytes": 413435,
+        "modified": "2026-09-18T07:17:09.605954+00:00",
+        "sha256_prefix": "d74a6bb76282cd2f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "LSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/LSTM.keras",
+        "bytes": 2627825,
+        "modified": "2026-09-23T14:13:06.819924+00:00",
+        "sha256_prefix": "f630f7027d4fcdc1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "GRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/GRU.keras",
+        "bytes": 3190771,
+        "modified": "2026-09-23T14:13:06.794627+00:00",
+        "sha256_prefix": "1a5e72a6e0acfd1f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "Transformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-23T14:13:06.829502+00:00",
+        "sha256_prefix": "fa4acec8ccb71c81"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "GARCHLSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/GARCHLSTM.keras",
+        "bytes": 16262157,
+        "modified": "2026-09-20T05:24:39.408980+00:00",
+        "sha256_prefix": "52a81f8d6c1df7c1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "GARCHGRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/GARCHGRU.keras",
+        "bytes": 12237808,
+        "modified": "2026-09-20T05:24:39.298465+00:00",
+        "sha256_prefix": "066ce9b11df6a6a2"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^FTSE",
+      "model": "GARCHTransformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/FTSE/GARCHTransformer.keras",
+        "bytes": 357001,
+        "modified": "2026-09-20T05:24:39.417475+00:00",
+        "sha256_prefix": "07d6679965fb0652"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "HistoricalVolatility",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "Persistence",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "GARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/GARCH.joblib",
+        "bytes": 338310,
+        "modified": "2026-09-18T07:17:09.607116+00:00",
+        "sha256_prefix": "ea22d364ec5934b8"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "EGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/EGARCH.joblib",
+        "bytes": 429494,
+        "modified": "2026-09-18T07:17:09.606556+00:00",
+        "sha256_prefix": "b9689477d17e8cea"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "GJRGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/GJRGARCH.joblib",
+        "bytes": 338398,
+        "modified": "2026-09-18T07:17:09.755784+00:00",
+        "sha256_prefix": "1aff05afae00f096"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "LinearRegression",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:09.783155+00:00",
+        "sha256_prefix": "92513fc8a77bbd57"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "RandomForest",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/RandomForest.joblib",
+        "bytes": 34496746,
+        "modified": "2026-09-18T07:17:09.849828+00:00",
+        "sha256_prefix": "3159e005957453ba"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "XGBoost",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/XGBoost.joblib",
+        "bytes": 419429,
+        "modified": "2026-09-18T07:17:09.852441+00:00",
+        "sha256_prefix": "13519be631653f4c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "LSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/LSTM.keras",
+        "bytes": 2627825,
+        "modified": "2026-09-23T14:13:06.869248+00:00",
+        "sha256_prefix": "a2fee8f3abec2e0d"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "GRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/GRU.keras",
+        "bytes": 3190771,
+        "modified": "2026-09-23T14:13:06.848550+00:00",
+        "sha256_prefix": "a8464bbf39a5c3c5"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "Transformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-23T14:13:06.875853+00:00",
+        "sha256_prefix": "69ed8509e16ea621"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "GARCHLSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/GARCHLSTM.keras",
+        "bytes": 16262157,
+        "modified": "2026-09-20T05:24:39.621913+00:00",
+        "sha256_prefix": "f80ad688c554e6b1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "GARCHGRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/GARCHGRU.keras",
+        "bytes": 12237808,
+        "modified": "2026-09-20T05:24:39.520049+00:00",
+        "sha256_prefix": "d5b79cc44f6c3c56"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^GDAXI",
+      "model": "GARCHTransformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/GDAXI/GARCHTransformer.keras",
+        "bytes": 357001,
+        "modified": "2026-09-20T05:24:39.636556+00:00",
+        "sha256_prefix": "8fe3066e8db7f7d1"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "HistoricalVolatility",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "Persistence",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "GARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/GARCH.joblib",
+        "bytes": 338310,
+        "modified": "2026-09-18T07:17:10.639782+00:00",
+        "sha256_prefix": "0cc3cf5a30bae21a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "EGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/EGARCH.joblib",
+        "bytes": 429494,
+        "modified": "2026-09-18T07:17:10.639209+00:00",
+        "sha256_prefix": "8f859054d1a5262f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "GJRGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/GJRGARCH.joblib",
+        "bytes": 338398,
+        "modified": "2026-09-18T07:17:10.781496+00:00",
+        "sha256_prefix": "9b8c4adba4826f2b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "LinearRegression",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:10.815505+00:00",
+        "sha256_prefix": "f50d6a469d0fa92b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "RandomForest",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/RandomForest.joblib",
+        "bytes": 34468954,
+        "modified": "2026-09-18T07:17:10.934192+00:00",
+        "sha256_prefix": "606069a36fa7c801"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "XGBoost",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/XGBoost.joblib",
+        "bytes": 403708,
+        "modified": "2026-09-18T07:17:10.936394+00:00",
+        "sha256_prefix": "d7a7079bd1050939"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "LSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/LSTM.keras",
+        "bytes": 2627825,
+        "modified": "2026-09-23T14:13:07.053669+00:00",
+        "sha256_prefix": "92c235a240570753"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "GRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/GRU.keras",
+        "bytes": 3190771,
+        "modified": "2026-09-23T14:13:07.024943+00:00",
+        "sha256_prefix": "d18d49ad767c8141"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "Transformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-23T14:13:07.060621+00:00",
+        "sha256_prefix": "2a472612f612799b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "GARCHLSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/GARCHLSTM.keras",
+        "bytes": 16262157,
+        "modified": "2026-09-20T05:24:40.280410+00:00",
+        "sha256_prefix": "2ed66135efc16853"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "GARCHGRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/GARCHGRU.keras",
+        "bytes": 12237808,
+        "modified": "2026-09-20T05:24:40.232787+00:00",
+        "sha256_prefix": "56caf953e6af9311"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^N225",
+      "model": "GARCHTransformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/N225/GARCHTransformer.keras",
+        "bytes": 357001,
+        "modified": "2026-09-20T05:24:40.291655+00:00",
+        "sha256_prefix": "28788966385d883b"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "HistoricalVolatility",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "Persistence",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "GARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/GARCH.joblib",
+        "bytes": 338294,
+        "modified": "2026-09-18T07:17:10.136188+00:00",
+        "sha256_prefix": "20a93bd2704b1c25"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "EGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/EGARCH.joblib",
+        "bytes": 429494,
+        "modified": "2026-09-18T07:17:10.135476+00:00",
+        "sha256_prefix": "265ccf54ee249e90"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "GJRGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/GJRGARCH.joblib",
+        "bytes": 338398,
+        "modified": "2026-09-18T07:17:10.276930+00:00",
+        "sha256_prefix": "5c2e73a91d05d0f3"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "LinearRegression",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:10.308742+00:00",
+        "sha256_prefix": "bcfab00e8e2b88c0"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "RandomForest",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/RandomForest.joblib",
+        "bytes": 34462906,
+        "modified": "2026-09-18T07:17:10.371122+00:00",
+        "sha256_prefix": "7accc89eb56d5229"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "XGBoost",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/XGBoost.joblib",
+        "bytes": 410444,
+        "modified": "2026-09-18T07:17:10.373899+00:00",
+        "sha256_prefix": "286535b39def94cb"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "LSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/LSTM.keras",
+        "bytes": 2627825,
+        "modified": "2026-09-23T14:13:06.954118+00:00",
+        "sha256_prefix": "9769f76450392462"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "GRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/GRU.keras",
+        "bytes": 3190771,
+        "modified": "2026-09-23T14:13:06.934726+00:00",
+        "sha256_prefix": "8750d15c64c58449"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "Transformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-23T14:13:06.962599+00:00",
+        "sha256_prefix": "0897eb08f49f86fc"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "GARCHLSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/GARCHLSTM.keras",
+        "bytes": 16262157,
+        "modified": "2026-09-20T05:24:40.051587+00:00",
+        "sha256_prefix": "98051ba982a0c138"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "GARCHGRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/GARCHGRU.keras",
+        "bytes": 12237808,
+        "modified": "2026-09-20T05:24:39.944191+00:00",
+        "sha256_prefix": "63a91b0295fbb95c"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "^HSI",
+      "model": "GARCHTransformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/HSI/GARCHTransformer.keras",
+        "bytes": 357001,
+        "modified": "2026-09-20T05:24:40.068240+00:00",
+        "sha256_prefix": "61f4af5adf63b3a2"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "HistoricalVolatility",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "Persistence",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": null,
+        "note": "rule-based model, no checkpoint"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "GARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/GARCH.joblib",
+        "bytes": 338310,
+        "modified": "2026-09-18T07:17:09.068340+00:00",
+        "sha256_prefix": "79a2c0376cdcb79f"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "EGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/EGARCH.joblib",
+        "bytes": 429494,
+        "modified": "2026-09-18T07:17:09.067753+00:00",
+        "sha256_prefix": "aece5dceb2f73d85"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "GJRGARCH",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/GJRGARCH.joblib",
+        "bytes": 338414,
+        "modified": "2026-09-18T07:17:09.199647+00:00",
+        "sha256_prefix": "99cd0148a4c3b86a"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "LinearRegression",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/LinearRegression.joblib",
+        "bytes": 3001,
+        "modified": "2026-09-18T07:17:09.227196+00:00",
+        "sha256_prefix": "8f115aa7e80576cd"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "RandomForest",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/RandomForest.joblib",
+        "bytes": 34472266,
+        "modified": "2026-09-18T07:17:09.350099+00:00",
+        "sha256_prefix": "1a02d567f1de55d2"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "XGBoost",
+      "rows": 813,
+      "test_start": "2022-10-17",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/XGBoost.joblib",
+        "bytes": 423917,
+        "modified": "2026-09-18T07:17:09.351747+00:00",
+        "sha256_prefix": "46fd02e6d247844d"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "LSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/LSTM.keras",
+        "bytes": 2627825,
+        "modified": "2026-09-23T14:13:06.773984+00:00",
+        "sha256_prefix": "18f0f839aaf4061e"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "GRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/GRU.keras",
+        "bytes": 3190771,
+        "modified": "2026-09-23T14:13:06.757482+00:00",
+        "sha256_prefix": "88f4b9bcb18151d4"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "Transformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/Transformer.keras",
+        "bytes": 356616,
+        "modified": "2026-09-23T14:13:06.777849+00:00",
+        "sha256_prefix": "25d9de9f56c93988"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "GARCHLSTM",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/GARCHLSTM.keras",
+        "bytes": 16262157,
+        "modified": "2026-09-20T05:24:39.199754+00:00",
+        "sha256_prefix": "37813df01dc730c7"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "GARCHGRU",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/GARCHGRU.keras",
+        "bytes": 12237808,
+        "modified": "2026-09-20T05:24:39.079249+00:00",
+        "sha256_prefix": "b232f75ad3606ea7"
+      },
+      "problems": []
+    },
+    {
+      "horizon": "22day",
+      "index": "000001.SS",
+      "model": "GARCHTransformer",
+      "rows": 784,
+      "test_start": "2022-11-25",
+      "test_end": "2025-11-28",
+      "checkpoint": {
+        "path": "results/models/22day/000001SS/GARCHTransformer.keras",
+        "bytes": 357001,
+        "modified": "2026-09-20T05:24:39.204839+00:00",
+        "sha256_prefix": "4c64e6844a10198b"
+      },
+      "problems": []
+    }
+  ]
+}

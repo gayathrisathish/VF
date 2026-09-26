@@ -1,0 +1,204 @@
+{
+  "generated": "2026-09-26T09:56:21.386497+00:00",
+  "source_evaluation_manifest_evaluated": "2026-09-26T09:56:04.385456+00:00",
+  "source_test_manifest_generated": "2026-09-24T07:37:36.439413+00:00",
+  "source_files": {
+    "results/evaluation/evaluation_manifest.json": "8a2252a8d0ef381a61a38dee89e61444bcd2cc132ba71c3e69bc63b0d1ffc440",
+    "results/evaluation/losses_1day.csv": "66e1d178669fb4357e877b2f19e19cdf2f11cec03a903f54132dac4e23883a64",
+    "results/evaluation/losses_5day.csv": "20df82103aa112d21b9b7ea8fa4b3e5738906b81e7053909f34feec2dd45b01e",
+    "results/evaluation/losses_22day.csv": "ae63765a3320e15fe7876d9ba6a5e2e455f7936062467f689ee42f59186ca447"
+  },
+  "horizons": [
+    "1day",
+    "5day",
+    "22day"
+  ],
+  "indices": [
+    "^GSPC",
+    "^IXIC",
+    "^FTSE",
+    "^GDAXI",
+    "^N225",
+    "^HSI",
+    "000001.SS"
+  ],
+  "models": [
+    "HistoricalVolatility",
+    "Persistence",
+    "GARCH",
+    "EGARCH",
+    "GJRGARCH",
+    "LinearRegression",
+    "RandomForest",
+    "XGBoost",
+    "LSTM",
+    "GRU",
+    "Transformer",
+    "GARCHLSTM",
+    "GARCHGRU",
+    "GARCHTransformer"
+  ],
+  "common_windows": {
+    "1day": {
+      "N": 787,
+      "Start": "2022-12-21",
+      "End": "2025-12-29"
+    },
+    "5day": {
+      "N": 787,
+      "Start": "2022-12-15",
+      "End": "2025-12-23"
+    },
+    "22day": {
+      "N": 784,
+      "Start": "2022-11-25",
+      "End": "2025-11-28"
+    }
+  },
+  "diebold_mariano": {
+    "differential": "L_A - L_B (positive mean: Model B has lower loss)",
+    "null": "E[d] = 0",
+    "alternative": "two-sided",
+    "losses": [
+      "QLIKE",
+      "SquaredError"
+    ],
+    "hac_kernel": "Bartlett",
+    "lag_rules": {
+      "auto_floor_h-1": "arch automatic Newey-West (1994) bandwidth, rounded up, floored at h - 1",
+      "fixed_21": "fixed lag 21 (RV_WINDOW - 1)"
+    },
+    "reference_distribution": "t(T-1)",
+    "hln_correction": false,
+    "alpha": 0.05
+  },
+  "multiple_testing": {
+    "correction": "holm",
+    "family_definitions": {
+      "benchmark": [
+        "Loss",
+        "HAC_Lag_Rule"
+      ],
+      "ablation": [
+        "Loss",
+        "HAC_Lag_Rule"
+      ],
+      "hybrid_vs_garch": [
+        "Loss",
+        "HAC_Lag_Rule"
+      ],
+      "pairwise": [
+        "Horizon",
+        "Index",
+        "Loss",
+        "HAC_Lag_Rule"
+      ]
+    },
+    "family_sizes": {
+      "benchmark": [
+        252
+      ],
+      "ablation": [
+        63
+      ],
+      "hybrid_vs_garch": [
+        63
+      ],
+      "pairwise": [
+        90
+      ]
+    }
+  },
+  "model_confidence_set": {
+    "implementation": "arch.bootstrap.MCS",
+    "models": [
+      "Persistence",
+      "GARCH",
+      "EGARCH",
+      "GJRGARCH",
+      "LinearRegression",
+      "RandomForest",
+      "XGBoost",
+      "LSTM",
+      "GRU",
+      "Transformer",
+      "GARCHLSTM",
+      "GARCHGRU",
+      "GARCHTransformer"
+    ],
+    "represented": {
+      "HistoricalVolatility": "Persistence"
+    },
+    "losses": [
+      "QLIKE",
+      "SquaredError"
+    ],
+    "method": "R",
+    "bootstrap": "stationary",
+    "reps": 10000,
+    "alpha": 0.1,
+    "seed": 20260925,
+    "block_size_rule": "ceil(max Politis-White stationary block length over pairwise loss differentials)",
+    "runs": 42
+  },
+  "qlike_clipped_sensitivity": {
+    "cells": [
+      {
+        "Horizon": "22day",
+        "Index": "^FTSE",
+        "Excluded_Dates": [
+          "2025-05-09"
+        ]
+      },
+      {
+        "Horizon": "22day",
+        "Index": "^HSI",
+        "Excluded_Dates": [
+          "2025-05-12"
+        ]
+      },
+      {
+        "Horizon": "22day",
+        "Index": "^N225",
+        "Excluded_Dates": [
+          "2025-05-09",
+          "2025-05-12"
+        ]
+      }
+    ],
+    "rows": 546,
+    "tests": 540
+  },
+  "counts": {
+    "dm_rows": {
+      "benchmark": 1008,
+      "ablation": 252,
+      "hybrid_vs_garch": 252,
+      "pairwise": 7644
+    },
+    "dm_tests": 9072,
+    "dm_not_tested": {
+      "identical_forecasts": 84
+    },
+    "mcs_rows": 588,
+    "equivalence_rows": 21,
+    "summary_rows": 126
+  },
+  "library_versions": {
+    "arch": "8.0.0",
+    "statsmodels": "0.14.6",
+    "scipy": "1.17.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5"
+  },
+  "disclosures": [
+    "Targets overlap: Actual on date t is the 22-day rolling realised volatility ending h days later, so consecutive targets share 21 of 22 returns at every horizon and loss differentials are strongly autocorrelated.",
+    "Models were estimated once on a fixed training window; tests compare the forecasts of the fitted models, not the population models.",
+    "Hybrid and plain networks were tuned separately, so the ablation compares a tuned hybrid with a tuned plain model rather than a single added feature.",
+    "Each neural network was trained once with a fixed seed; training-seed variability is not reflected in any test.",
+    "At the 22-day horizon the 784 overlapping observations carry roughly 36 non-overlapping months of information, so power is low and the asymptotic approximations are rough.",
+    "Four LinearRegression 22-day forecasts (^FTSE 1, ^N225 2, ^HSI 1) are zero and are floored at 1e-8 by the canonical QLIKE. Each produces a per-observation QLIKE of millions that dominates the mean and the HAC variance of any differential involving that model in that cell, and destabilises the MCS bootstrap. Primary results keep these observations; dm_qlike_clipped_sensitivity.csv repeats the QLIKE tests without those dates.",
+    "Median_Loss_Ratio_vs_Persistence is left empty for QLIKE: the canonical QLIKE is negative and defined only up to an additive constant, so a ratio of means has no stable interpretation. It is reported for squared and absolute error.",
+    "Absolute error is minimised by the conditional median rather than the mean, so it is reported descriptively only."
+  ]
+}

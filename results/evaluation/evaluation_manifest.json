@@ -1,0 +1,99 @@
+{
+  "evaluated": "2026-09-26T09:56:04.385456+00:00",
+  "source_test_manifest_generated": "2026-09-24T07:37:36.439413+00:00",
+  "source_files": {
+    "results/test_predictions/test_manifest.json": "14043efe17f457101b4d8727c86688a9aada21949b484cfb1595e41f316697e4",
+    "results/test_predictions/test_predictions_1day.csv": "b25ee2303d73b22879775ab4ff0462d9d66fdc215e31359f0ec39a2dd191dc9d",
+    "results/test_predictions/test_predictions_5day.csv": "567bae66a57b1468fd80b35c0bb0cce4d8a569ef70c0bbc3f880687062cb1c81",
+    "results/test_predictions/test_predictions_22day.csv": "a8239dfb3413567ea562e9f2761abfd813d58f0bc411277cc82607c3f7e5edde"
+  },
+  "cells": 294,
+  "cells_per_horizon": {
+    "1day": 98,
+    "5day": 98,
+    "22day": 98
+  },
+  "horizons": [
+    "1day",
+    "5day",
+    "22day"
+  ],
+  "indices": [
+    "^GSPC",
+    "^IXIC",
+    "^FTSE",
+    "^GDAXI",
+    "^N225",
+    "^HSI",
+    "000001.SS"
+  ],
+  "models": [
+    "HistoricalVolatility",
+    "Persistence",
+    "GARCH",
+    "EGARCH",
+    "GJRGARCH",
+    "LinearRegression",
+    "RandomForest",
+    "XGBoost",
+    "LSTM",
+    "GRU",
+    "Transformer",
+    "GARCHLSTM",
+    "GARCHGRU",
+    "GARCHTransformer"
+  ],
+  "window": "common",
+  "common_windows": {
+    "1day": {
+      "N": 787,
+      "Start": "2022-12-21",
+      "End": "2025-12-29"
+    },
+    "5day": {
+      "N": 787,
+      "Start": "2022-12-15",
+      "End": "2025-12-23"
+    },
+    "22day": {
+      "N": 784,
+      "Start": "2022-11-25",
+      "End": "2025-11-28"
+    }
+  },
+  "metrics": {
+    "implementation": "src/evaluation/metrics.py::calculate_metrics",
+    "names": [
+      "RMSE",
+      "MAE",
+      "QLIKE"
+    ],
+    "qlike_epsilon": 1e-08
+  },
+  "loss_rows": {
+    "1day": 77126,
+    "5day": 77126,
+    "22day": 76832
+  },
+  "total_loss_rows": 231084,
+  "cells_with_clipped_predictions": [
+    {
+      "Horizon": "22day",
+      "Index": "^FTSE",
+      "Model": "LinearRegression",
+      "N_clipped": 1
+    },
+    {
+      "Horizon": "22day",
+      "Index": "^N225",
+      "Model": "LinearRegression",
+      "N_clipped": 2
+    },
+    {
+      "Horizon": "22day",
+      "Index": "^HSI",
+      "Model": "LinearRegression",
+      "N_clipped": 1
+    }
+  ]
+}

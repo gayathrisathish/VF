@@ -162,14 +162,14 @@ def _expected_test_dates(model_name: str, horizon: str) -> pd.DatetimeIndex:
 # =============================================================================
 
 def _predict_benchmark(index: str, dataset: Dict[str, object]) -> np.ndarray:
-    """Reproduce the rule both benchmarks use: last observed volatility."""
+    """Reproduce the rule both benchmarks use: realized volatility at row t."""
 
-    lag_column = f"{index}_rv_lag1"
+    rv_column = f"{index}_rv"
     features = dataset["X_test"]
-    if lag_column not in features.columns:
-        raise KeyError(f"Benchmark column '{lag_column}' missing from X_test.")
+    if rv_column not in features.columns:
+        raise KeyError(f"Benchmark column '{rv_column}' missing from X_test.")
 
-    return np.asarray(features[lag_column], dtype=float)
+    return np.asarray(features[rv_column], dtype=float)
 
 
 def _predict_arch(

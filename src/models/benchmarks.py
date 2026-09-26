@@ -34,11 +34,11 @@ def train_historical_volatility(
     Uses the most recent realized volatility observation as the prediction.
     """
 
-    # Last realized volatility feature
-    lag_column = f"{index}_rv_lag1"
+    # Realized volatility on the forecast-origin row t
+    rv_column = f"{index}_rv"
 
-    validation_predictions = X_validation[lag_column].values
-    test_predictions = X_test[lag_column].values
+    validation_predictions = X_validation[rv_column].values
+    test_predictions = X_test[rv_column].values
     validation_metrics = calculate_metrics(
         y_validation,
         validation_predictions
@@ -81,13 +81,13 @@ def train_persistence(
     """
     Persistence Benchmark.
 
-    Forecast equals the previous realized volatility.
+    Forecast equals the realized volatility on the forecast-origin row t.
     """
 
-    lag_column = f"{index}_rv_lag1"
+    rv_column = f"{index}_rv"
 
-    validation_predictions = X_validation[lag_column].values
-    test_predictions = X_test[lag_column].values
+    validation_predictions = X_validation[rv_column].values
+    test_predictions = X_test[rv_column].values
 
     validation_metrics = calculate_metrics(
         y_validation,
